@@ -1,0 +1,35 @@
+---
+title: "CV of Kacie Ring"
+output: distill::distill_article
+---
+
+<a href = 'Kacie_Ring_CV_2021.pdf' target = '_blank'>Click here for a PDF</a>
+
+# Education
+
+**University of California, Santa Barbara**
+    
+    -Fall 2020-Present 
+    -Ecology, Evolution, and Marine Sciences PhD 
+    -Advisor: Cherie Briggs 
+
+**San Francisco State University** 						
+    
+    -Fall 2018-Spring 2020 
+    -Microbiology M.S. GPA 4.0 
+    -Master’s Thesis: “Host blood meal identity modifies vector gene expression and competency” 
+    -Advisor: Andrea Swei 
+    -Committee: Seemay Chou and Ravinder Sehgal 
+
+**University of California, Santa Cruz**					 
+
+    -Fall 2013-Spring 2017 
+    -Ecology and Evolutionary Biology B.S. GPA 3.55
+    -Dean’s List, Undergraduate Researcher
+    -Senior Thesis: “The Effect of Marine Subsidies on Insectivorous Lizard Abundance in Baja California”
+      -Advisor: Donald Croll  
+
+# Publications 
+
+Ring, K., Couper, L. I., Sapiro, A. L., Yarza, F., Yang, X. F., Clay, K., Mateusiak, C., Chou, S., & Swei, A. (2022). Host blood meal identity modifies vector gene expression and competency. Molecular ecology, 10.1111/mec.16413. Advance online publication. https://doi.org/10.1111/mec.16413
+

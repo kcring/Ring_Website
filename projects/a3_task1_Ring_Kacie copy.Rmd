@@ -1,0 +1,127 @@
+---
+title: "a3_task1_Ring_Kacie"
+author: "Kacie Ring"
+date: "2/17/2022"
+output: 
+  html_document:
+    theme: cosmo
+    highlight: pygments
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+
+library(tidyverse)
+library(here)
+ 
+# For Part 1 (PCA)
+library(ggfortify) # For PCA biplot
+library(palmerpenguins)
+library(patchwork)
+ 
+# For Part 2 (ggplot customization)
+library(readxl)
+library(gghighlight) # For useful highlighting
+library(lubridate) # For easier dates & times
+library(plotly) # Interactive graphs
+
+
+world <- read.csv("world_env_vars.csv")
+str(world)
+
+```
+
+### Introduction 
+
+The purpose of this analysis is to determine what environmental variables determine mean precipitation levels by country. We utilized the "Environmental variables for world countries" available on kaggle. 
+
+
+### Statistical methods 
+
+Data was organized by descending mean water precipitation and subsetted with into highest and lowest 20 precipitation mean values. The top 20 were categorized as wet countries and the lowest 20 countries were categorized as dry countries. Variables measuring rain were removed from the dataset to avoid any sample clustering based on rain values. Data was scaled and stored in a distance matrix. 
+
+
+**Data Cleaning** : Categorize wet and dry countries. Remove precipitation variables and scale data. 
+
+
+```{r}
+
+world_wet <- world %>%
+  drop_na() %>% 
+  arrange(desc(rain_mean_annual)) %>%
+  filter(rain_mean_annual > 2282.339) %>% #20 highest annual rain 
+  mutate(Conditon = "Wet")
+
+world_dry <- world %>%
+  drop_na() %>% 
+  arrange(desc(rain_mean_annual)) %>%
+  filter(rain_mean_annual < 229.21234) %>%
+   mutate(Conditon = "Dry")
+  #20 lowest annual rain 
+ 
+new_lemur_data <- lemur %>% 
+  group_by(Taxon)
+  filter(Taxon == c())
+
+world_clean <- full_join(world_wet, world_dry) #rejoin data subsets 
+
+
+world_pca <- world_clean %>%
+  select(2:28) %>%  #drop country names 
+  select(-c(3:4, 7:15, 19, 20, 22, 25)) %>%
+  scale() %>% #scale 
+  prcomp() #create pc matrix 
+
+```
+
+**Create biplot**
+
+```{r, fig.align='center', fig.cap='Figure 1: PCA plot showing the environmental variables that may affect precipitation levels in wet and dry countries.'}
+
+autoplot(world_pca,
+     	data = world_clean,
+     	loadings = TRUE,
+     	colour = 'Conditon', #wet and dry condition 
+     	loadings.label = TRUE,
+     	loadings.label.size = 2.5,
+     	loadings.colour = "grey",
+     	loadings.label.colour = "black",
+     	loadings.label.vjust = -0.4,
+     	loadings.label.hjust = .05
+     	)  +
+  labs(main = "Biplot of wet and dry countries using environmental variables") + 
+  scale_color_manual(values = c("darkgoldenrod2","aquamarine4")) +
+  scale_fill_manual(values = c("darkgoldenrod2","aquamarine4")) +
+  theme_minimal()
+ 
+
+```
+
+**Screeplot**
+
+```{r, fig.align='center', fig.cap='Figure 2: Screeplot showing additional principal component percentages from Figure 1'}
+
+sd_vec <- world_pca$sdev #pulls standard deviation (we want the variance tho)
+var_vec <- sd_vec^2 ### standard deviation is sqrt of variance!
+pc_names <- colnames(world_pca$rotation) #make a vector of pc names
+ 
+pct_expl_df <- data.frame(v = var_vec, 
+                          pct_v = var_vec / sum(var_vec), 
+                          #each individual value divided by the total 
+                          pc = fct_inorder(pc_names)) %>%
+                          #
+  mutate(pct_lbl = paste0(round(pct_v*100, 1), '%')) #create a percentage 
+ 
+ggplot(pct_expl_df, aes(x = pc, y = v)) +
+  geom_col() +
+  geom_text(aes(label = pct_lbl), vjust = 0, nudge_y = .002) +
+  labs(x = 'Principal component', y = 'Variance explained', main = "Screeplot") + 
+  theme_minimal()
+```
+
+
+
+### Conclusion 
+
+Our principle component analysis shows that certain environmental variables are associated with wet and dry countries. Cloudiness and canopy cover are strongly associated with wet countries whereas cropland, wind, and acccessibility to cities are associated with dry countries. This analysis shows that certain human associated land use alterations such as deforestation, conversion to agriculture,and urban development may reduce mean precipitation levels. 
+

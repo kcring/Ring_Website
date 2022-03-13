@@ -1,6 +1,6 @@
 ---
 title: "Kacie Ring"
-image: "kacie.JPG"
+image: "surf.png"
 links:
   - label: LinkedIn
     url: "https://linkedin.com/"
@@ -16,4 +16,9 @@ site: distill::distill_website
 ---
  
 
-2nd Year PhD student at UCSB in the Briggs lab studying tick-borne pathogens. 
+## About me! 
+
+
+I am a 2nd Ph.D. student in Dr. Cherie Briggs at UCSB studying Ecology, Evolution, and Marine Biology. My research implements an interdisciplinary approach to investigate the abiotic and biotic drivers of tick-borne diseases. I use an array of approaches in my research including field surveys, pathogen assays, mathematical modeling, and transcriptomics. 
+
+

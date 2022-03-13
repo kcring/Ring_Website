@@ -1,0 +1,3074 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+  <meta name="generator" content="distill" />
+
+  <style type="text/css">
+  /* Hide doc at startup (prevent jankiness while JS renders/transforms) */
+  body {
+    visibility: hidden;
+  }
+  </style>
+
+ <!--radix_placeholder_import_source-->
+ <!--/radix_placeholder_import_source-->
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css" data-origin="pandoc">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ad0000; } /* Alert */
+code span.an { color: #5e5e5e; } /* Annotation */
+code span.at { } /* Attribute */
+code span.bn { color: #ad0000; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007ba5; } /* ControlFlow */
+code span.ch { color: #20794d; } /* Char */
+code span.cn { color: #8f5902; } /* Constant */
+code span.co { color: #5e5e5e; } /* Comment */
+code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+code span.dt { color: #ad0000; } /* DataType */
+code span.dv { color: #ad0000; } /* DecVal */
+code span.er { color: #ad0000; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #ad0000; } /* Float */
+code span.fu { color: #4758ab; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #5e5e5e; } /* Information */
+code span.kw { color: #007ba5; } /* Keyword */
+code span.op { color: #5e5e5e; } /* Operator */
+code span.ot { color: #007ba5; } /* Other */
+code span.pp { color: #ad0000; } /* Preprocessor */
+code span.sc { color: #5e5e5e; } /* SpecialChar */
+code span.ss { color: #20794d; } /* SpecialString */
+code span.st { color: #20794d; } /* String */
+code span.va { color: #111111; } /* Variable */
+code span.vs { color: #20794d; } /* VerbatimString */
+code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
+</style>
+
+
+  <!--radix_placeholder_meta_tags-->
+  <title>Disease Ecologist: A transcriptome analysis of the western black legged tick</title>
+
+  <meta property="description" itemprop="description" content="Host blood meal experiment- Ixodes pacificus mapped to ISE6 (Ixodes scapularis) |"/>
+
+
+
+  <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
+  <meta property="og:title" content="Disease Ecologist: A transcriptome analysis of the western black legged tick"/>
+  <meta property="og:type" content="article"/>
+  <meta property="og:description" content="Host blood meal experiment- Ixodes pacificus mapped to ISE6 (Ixodes scapularis) |"/>
+  <meta property="og:locale" content="en_US"/>
+  <meta property="og:site_name" content="Disease Ecologist"/>
+
+  <!--  https://dev.twitter.com/cards/types/summary -->
+  <meta property="twitter:card" content="summary"/>
+  <meta property="twitter:title" content="Disease Ecologist: A transcriptome analysis of the western black legged tick"/>
+  <meta property="twitter:description" content="Host blood meal experiment- Ixodes pacificus mapped to ISE6 (Ixodes scapularis) |"/>
+
+  <!--/radix_placeholder_meta_tags-->
+  <!--radix_placeholder_rmarkdown_metadata-->
+
+  <script type="text/json" id="radix-rmarkdown-metadata">
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","output"]}},"value":[{"type":"character","attributes":{},"value":["A transcriptome analysis of the western black legged tick"]},{"type":"character","attributes":{},"value":["Host blood meal experiment- Ixodes pacificus mapped to ISE6 (Ixodes scapularis) |"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["code_folding"]}},"value":[{"type":"logical","attributes":{},"value":[true]}]}]}]}
+  </script>
+  <!--/radix_placeholder_rmarkdown_metadata-->
+  <!--radix_placeholder_navigation_in_header-->
+  <meta name="distill:offset" content=""/>
+
+  <script type="application/javascript">
+
+    window.headroom_prevent_pin = false;
+
+    window.document.addEventListener("DOMContentLoaded", function (event) {
+
+      // initialize headroom for banner
+      var header = $('header').get(0);
+      var headerHeight = header.offsetHeight;
+      var headroom = new Headroom(header, {
+        tolerance: 5,
+        onPin : function() {
+          if (window.headroom_prevent_pin) {
+            window.headroom_prevent_pin = false;
+            headroom.unpin();
+          }
+        }
+      });
+      headroom.init();
+      if(window.location.hash)
+        headroom.unpin();
+      $(header).addClass('headroom--transition');
+
+      // offset scroll location for banner on hash change
+      // (see: https://github.com/WickyNilliams/headroom.js/issues/38)
+      window.addEventListener("hashchange", function(event) {
+        window.scrollTo(0, window.pageYOffset - (headerHeight + 25));
+      });
+
+      // responsive menu
+      $('.distill-site-header').each(function(i, val) {
+        var topnav = $(this);
+        var toggle = topnav.find('.nav-toggle');
+        toggle.on('click', function() {
+          topnav.toggleClass('responsive');
+        });
+      });
+
+      // nav dropdowns
+      $('.nav-dropbtn').click(function(e) {
+        $(this).next('.nav-dropdown-content').toggleClass('nav-dropdown-active');
+        $(this).parent().siblings('.nav-dropdown')
+           .children('.nav-dropdown-content').removeClass('nav-dropdown-active');
+      });
+      $("body").click(function(e){
+        $('.nav-dropdown-content').removeClass('nav-dropdown-active');
+      });
+      $(".nav-dropdown").click(function(e){
+        e.stopPropagation();
+      });
+    });
+  </script>
+
+  <style type="text/css">
+
+  /* Theme (user-documented overrideables for nav appearance) */
+
+  .distill-site-nav {
+    color: rgba(255, 255, 255, 0.8);
+    background-color: #0F2E3D;
+    font-size: 15px;
+    font-weight: 300;
+  }
+
+  .distill-site-nav a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .distill-site-nav a:hover {
+    color: white;
+  }
+
+  @media print {
+    .distill-site-nav {
+      display: none;
+    }
+  }
+
+  .distill-site-header {
+
+  }
+
+  .distill-site-footer {
+
+  }
+
+
+  /* Site Header */
+
+  .distill-site-header {
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 3;
+  }
+
+  .distill-site-header .nav-left {
+    display: inline-block;
+    margin-left: 8px;
+  }
+
+  @media screen and (max-width: 768px) {
+    .distill-site-header .nav-left {
+      margin-left: 0;
+    }
+  }
+
+
+  .distill-site-header .nav-right {
+    float: right;
+    margin-right: 8px;
+  }
+
+  .distill-site-header a,
+  .distill-site-header .title {
+    display: inline-block;
+    text-align: center;
+    padding: 14px 10px 14px 10px;
+  }
+
+  .distill-site-header .title {
+    font-size: 18px;
+    min-width: 150px;
+  }
+
+  .distill-site-header .logo {
+    padding: 0;
+  }
+
+  .distill-site-header .logo img {
+    display: none;
+    max-height: 20px;
+    width: auto;
+    margin-bottom: -4px;
+  }
+
+  .distill-site-header .nav-image img {
+    max-height: 18px;
+    width: auto;
+    display: inline-block;
+    margin-bottom: -3px;
+  }
+
+
+
+  @media screen and (min-width: 1000px) {
+    .distill-site-header .logo img {
+      display: inline-block;
+    }
+    .distill-site-header .nav-left {
+      margin-left: 20px;
+    }
+    .distill-site-header .nav-right {
+      margin-right: 20px;
+    }
+    .distill-site-header .title {
+      padding-left: 12px;
+    }
+  }
+
+
+  .distill-site-header .nav-toggle {
+    display: none;
+  }
+
+  .nav-dropdown {
+    display: inline-block;
+    position: relative;
+  }
+
+  .nav-dropdown .nav-dropbtn {
+    border: none;
+    outline: none;
+    color: rgba(255, 255, 255, 0.8);
+    padding: 16px 10px;
+    background-color: transparent;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    margin: 0;
+    margin-top: 1px;
+    z-index: 2;
+  }
+
+  .nav-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 200px;
+    border: 1px solid rgba(0,0,0,0.15);
+    border-radius: 4px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
+    z-index: 1;
+    margin-top: 2px;
+    white-space: nowrap;
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+
+  .nav-dropdown-content hr {
+    margin-top: 4px;
+    margin-bottom: 4px;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-dropdown-active {
+    display: block;
+  }
+
+  .nav-dropdown-content a, .nav-dropdown-content .nav-dropdown-header {
+    color: black;
+    padding: 6px 24px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+
+  .nav-dropdown-content .nav-dropdown-header {
+    display: block;
+    padding: 5px 24px;
+    padding-bottom: 0;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #999999;
+    white-space: nowrap;
+  }
+
+  .nav-dropdown:hover .nav-dropbtn {
+    color: white;
+  }
+
+  .nav-dropdown-content a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+
+  .nav-right .nav-dropdown-content {
+    margin-left: -45%;
+    right: 0;
+  }
+
+  @media screen and (max-width: 768px) {
+    .distill-site-header a, .distill-site-header .nav-dropdown  {display: none;}
+    .distill-site-header a.nav-toggle {
+      float: right;
+      display: block;
+    }
+    .distill-site-header .title {
+      margin-left: 0;
+    }
+    .distill-site-header .nav-right {
+      margin-right: 0;
+    }
+    .distill-site-header {
+      overflow: hidden;
+    }
+    .nav-right .nav-dropdown-content {
+      margin-left: 0;
+    }
+  }
+
+
+  @media screen and (max-width: 768px) {
+    .distill-site-header.responsive {position: relative; min-height: 500px; }
+    .distill-site-header.responsive a.nav-toggle {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .distill-site-header.responsive a,
+    .distill-site-header.responsive .nav-dropdown {
+      display: block;
+      text-align: left;
+    }
+    .distill-site-header.responsive .nav-left,
+    .distill-site-header.responsive .nav-right {
+      width: 100%;
+    }
+    .distill-site-header.responsive .nav-dropdown {float: none;}
+    .distill-site-header.responsive .nav-dropdown-content {position: relative;}
+    .distill-site-header.responsive .nav-dropdown .nav-dropbtn {
+      display: block;
+      width: 100%;
+      text-align: left;
+    }
+  }
+
+  /* Site Footer */
+
+  .distill-site-footer {
+    width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+    z-index: 3;
+    margin-top: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+  }
+
+  /* Headroom */
+
+  d-title {
+    padding-top: 6rem;
+  }
+
+  @media print {
+    d-title {
+      padding-top: 4rem;
+    }
+  }
+
+  .headroom {
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .headroom--transition {
+    transition: all .4s ease-in-out;
+  }
+
+  .headroom--unpinned {
+    top: -100px;
+  }
+
+  .headroom--pinned {
+    top: 0;
+  }
+
+  /* adjust viewport for navbar height */
+  /* helps vertically center bootstrap (non-distill) content */
+  .min-vh-100 {
+    min-height: calc(100vh - 100px) !important;
+  }
+
+  </style>
+
+  <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+  <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet"/>
+  <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet"/>
+  <script src="site_libs/headroom-0.9.4/headroom.min.js"></script>
+  <script src="site_libs/autocomplete-0.37.1/autocomplete.min.js"></script>
+  <script src="site_libs/fuse-6.4.1/fuse.min.js"></script>
+
+  <script type="application/javascript">
+
+  function getMeta(metaName) {
+    var metas = document.getElementsByTagName('meta');
+    for (let i = 0; i < metas.length; i++) {
+      if (metas[i].getAttribute('name') === metaName) {
+        return metas[i].getAttribute('content');
+      }
+    }
+    return '';
+  }
+
+  function offsetURL(url) {
+    var offset = getMeta('distill:offset');
+    return offset ? offset + '/' + url : url;
+  }
+
+  function createFuseIndex() {
+
+    // create fuse index
+    var options = {
+      keys: [
+        { name: 'title', weight: 20 },
+        { name: 'categories', weight: 15 },
+        { name: 'description', weight: 10 },
+        { name: 'contents', weight: 5 },
+      ],
+      ignoreLocation: true,
+      threshold: 0
+    };
+    var fuse = new window.Fuse([], options);
+
+    // fetch the main search.json
+    return fetch(offsetURL('search.json'))
+      .then(function(response) {
+        if (response.status == 200) {
+          return response.json().then(function(json) {
+            // index main articles
+            json.articles.forEach(function(article) {
+              fuse.add(article);
+            });
+            // download collections and index their articles
+            return Promise.all(json.collections.map(function(collection) {
+              return fetch(offsetURL(collection)).then(function(response) {
+                if (response.status === 200) {
+                  return response.json().then(function(articles) {
+                    articles.forEach(function(article) {
+                      fuse.add(article);
+                    });
+                  })
+                } else {
+                  return Promise.reject(
+                    new Error('Unexpected status from search index request: ' +
+                              response.status)
+                  );
+                }
+              });
+            })).then(function() {
+              return fuse;
+            });
+          });
+
+        } else {
+          return Promise.reject(
+            new Error('Unexpected status from search index request: ' +
+                        response.status)
+          );
+        }
+      });
+  }
+
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+
+    // get search element (bail if we don't have one)
+    var searchEl = window.document.getElementById('distill-search');
+    if (!searchEl)
+      return;
+
+    createFuseIndex()
+      .then(function(fuse) {
+
+        // make search box visible
+        searchEl.classList.remove('hidden');
+
+        // initialize autocomplete
+        var options = {
+          autoselect: true,
+          hint: false,
+          minLength: 2,
+        };
+        window.autocomplete(searchEl, options, [{
+          source: function(query, callback) {
+            const searchOptions = {
+              isCaseSensitive: false,
+              shouldSort: true,
+              minMatchCharLength: 2,
+              limit: 10,
+            };
+            var results = fuse.search(query, searchOptions);
+            callback(results
+              .map(function(result) { return result.item; })
+            );
+          },
+          templates: {
+            suggestion: function(suggestion) {
+              var img = suggestion.preview && Object.keys(suggestion.preview).length > 0
+                ? `<img src="${offsetURL(suggestion.preview)}"</img>`
+                : '';
+              var html = `
+                <div class="search-item">
+                  <h3>${suggestion.title}</h3>
+                  <div class="search-item-description">
+                    ${suggestion.description || ''}
+                  </div>
+                  <div class="search-item-preview">
+                    ${img}
+                  </div>
+                </div>
+              `;
+              return html;
+            }
+          }
+        }]).on('autocomplete:selected', function(event, suggestion) {
+          window.location.href = offsetURL(suggestion.path);
+        });
+        // remove inline display style on autocompleter (we want to
+        // manage responsive display via css)
+        $('.algolia-autocomplete').css("display", "");
+      })
+      .catch(function(error) {
+        console.log(error);
+      });
+
+  });
+
+  </script>
+
+  <style type="text/css">
+
+  .nav-search {
+    font-size: x-small;
+  }
+
+  /* Algolioa Autocomplete */
+
+  .algolia-autocomplete {
+    display: inline-block;
+    margin-left: 10px;
+    vertical-align: sub;
+    background-color: white;
+    color: black;
+    padding: 6px;
+    padding-top: 8px;
+    padding-bottom: 0;
+    border-radius: 6px;
+    border: 1px #0F2E3D solid;
+    width: 180px;
+  }
+
+
+  @media screen and (max-width: 768px) {
+    .distill-site-nav .algolia-autocomplete {
+      display: none;
+      visibility: hidden;
+    }
+    .distill-site-nav.responsive .algolia-autocomplete {
+      display: inline-block;
+      visibility: visible;
+    }
+    .distill-site-nav.responsive .algolia-autocomplete .aa-dropdown-menu {
+      margin-left: 0;
+      width: 400px;
+      max-height: 400px;
+    }
+  }
+
+  .algolia-autocomplete .aa-input, .algolia-autocomplete .aa-hint {
+    width: 90%;
+    outline: none;
+    border: none;
+  }
+
+  .algolia-autocomplete .aa-hint {
+    color: #999;
+  }
+  .algolia-autocomplete .aa-dropdown-menu {
+    width: 550px;
+    max-height: 70vh;
+    overflow-x: visible;
+    overflow-y: scroll;
+    padding: 5px;
+    margin-top: 3px;
+    margin-left: -150px;
+    background-color: #fff;
+    border-radius: 5px;
+    border: 1px solid #999;
+    border-top: none;
+  }
+
+  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion {
+    cursor: pointer;
+    padding: 5px 4px;
+    border-bottom: 1px solid #eee;
+  }
+
+  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion:last-of-type {
+    border-bottom: none;
+    margin-bottom: 2px;
+  }
+
+  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item {
+    overflow: hidden;
+    font-size: 0.8em;
+    line-height: 1.4em;
+  }
+
+  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item h3 {
+    font-size: 1rem;
+    margin-block-start: 0;
+    margin-block-end: 5px;
+  }
+
+  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-description {
+    display: inline-block;
+    overflow: hidden;
+    height: 2.8em;
+    width: 80%;
+    margin-right: 4%;
+  }
+
+  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-preview {
+    display: inline-block;
+    width: 15%;
+  }
+
+  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-preview img {
+    height: 3em;
+    width: auto;
+    display: none;
+  }
+
+  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-preview img[src] {
+    display: initial;
+  }
+
+  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion.aa-cursor {
+    background-color: #eee;
+  }
+  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion em {
+    font-weight: bold;
+    font-style: normal;
+  }
+
+  </style>
+
+
+  <!--/radix_placeholder_navigation_in_header-->
+  <!--radix_placeholder_distill-->
+
+  <style type="text/css">
+
+  body {
+    background-color: white;
+  }
+
+  .pandoc-table {
+    width: 100%;
+  }
+
+  .pandoc-table>caption {
+    margin-bottom: 10px;
+  }
+
+  .pandoc-table th:not([align]) {
+    text-align: left;
+  }
+
+  .pagedtable-footer {
+    font-size: 15px;
+  }
+
+  d-byline .byline {
+    grid-template-columns: 2fr 2fr;
+  }
+
+  d-byline .byline h3 {
+    margin-block-start: 1.5em;
+  }
+
+  d-byline .byline .authors-affiliations h3 {
+    margin-block-start: 0.5em;
+  }
+
+  .authors-affiliations .orcid-id {
+    width: 16px;
+    height:16px;
+    margin-left: 4px;
+    margin-right: 4px;
+    vertical-align: middle;
+    padding-bottom: 2px;
+  }
+
+  d-title .dt-tags {
+    margin-top: 1em;
+    grid-column: text;
+  }
+
+  .dt-tags .dt-tag {
+    text-decoration: none;
+    display: inline-block;
+    color: rgba(0,0,0,0.6);
+    padding: 0em 0.4em;
+    margin-right: 0.5em;
+    margin-bottom: 0.4em;
+    font-size: 70%;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  d-article table.gt_table td,
+  d-article table.gt_table th {
+    border-bottom: none;
+  }
+
+  .html-widget {
+    margin-bottom: 2.0em;
+  }
+
+  .l-screen-inset {
+    padding-right: 16px;
+  }
+
+  .l-screen .caption {
+    margin-left: 10px;
+  }
+
+  .shaded {
+    background: rgb(247, 247, 247);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .shaded .html-widget {
+    margin-bottom: 0;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .shaded .shaded-content {
+    background: white;
+  }
+
+  .text-output {
+    margin-top: 0;
+    line-height: 1.5em;
+  }
+
+  .hidden {
+    display: none !important;
+  }
+
+  d-article {
+    padding-top: 2.5rem;
+    padding-bottom: 30px;
+  }
+
+  d-appendix {
+    padding-top: 30px;
+  }
+
+  d-article>p>img {
+    width: 100%;
+  }
+
+  d-article h2 {
+    margin: 1rem 0 1.5rem 0;
+  }
+
+  d-article h3 {
+    margin-top: 1.5rem;
+  }
+
+  d-article iframe {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 2.0em;
+    width: 100%;
+  }
+
+  /* Tweak code blocks */
+
+  d-article div.sourceCode code,
+  d-article pre code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  d-article pre,
+  d-article div.sourceCode,
+  d-article div.sourceCode pre {
+    overflow: auto;
+  }
+
+  d-article div.sourceCode {
+    background-color: white;
+  }
+
+  d-article div.sourceCode pre {
+    padding-left: 10px;
+    font-size: 12px;
+    border-left: 2px solid rgba(0,0,0,0.1);
+  }
+
+  d-article pre {
+    font-size: 12px;
+    color: black;
+    background: none;
+    margin-top: 0;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+
+  d-article pre a {
+    border-bottom: none;
+  }
+
+  d-article pre a:hover {
+    border-bottom: none;
+    text-decoration: underline;
+  }
+
+  d-article details {
+    grid-column: text;
+    margin-bottom: 0.8em;
+  }
+
+  @media(min-width: 768px) {
+
+  d-article pre,
+  d-article div.sourceCode,
+  d-article div.sourceCode pre {
+    overflow: visible !important;
+  }
+
+  d-article div.sourceCode pre {
+    padding-left: 18px;
+    font-size: 14px;
+  }
+
+  d-article pre {
+    font-size: 14px;
+  }
+
+  }
+
+  figure img.external {
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+    padding: 18px;
+    box-sizing: border-box;
+  }
+
+  /* CSS for d-contents */
+
+  .d-contents {
+    grid-column: text;
+    color: rgba(0,0,0,0.8);
+    font-size: 0.9em;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+    padding-bottom: 0.5em;
+    margin-bottom: 1em;
+    padding-left: 0.25em;
+    justify-self: start;
+  }
+
+  @media(min-width: 1000px) {
+    .d-contents.d-contents-float {
+      height: 0;
+      grid-column-start: 1;
+      grid-column-end: 4;
+      justify-self: center;
+      padding-right: 3em;
+      padding-left: 2em;
+    }
+  }
+
+  .d-contents nav h3 {
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 1em;
+  }
+
+  .d-contents li {
+    list-style-type: none
+  }
+
+  .d-contents nav > ul {
+    padding-left: 0;
+  }
+
+  .d-contents ul {
+    padding-left: 1em
+  }
+
+  .d-contents nav ul li {
+    margin-top: 0.6em;
+    margin-bottom: 0.2em;
+  }
+
+  .d-contents nav a {
+    font-size: 13px;
+    border-bottom: none;
+    text-decoration: none
+    color: rgba(0, 0, 0, 0.8);
+  }
+
+  .d-contents nav a:hover {
+    text-decoration: underline solid rgba(0, 0, 0, 0.6)
+  }
+
+  .d-contents nav > ul > li > a {
+    font-weight: 600;
+  }
+
+  .d-contents nav > ul > li > ul {
+    font-weight: inherit;
+  }
+
+  .d-contents nav > ul > li > ul > li {
+    margin-top: 0.2em;
+  }
+
+
+  .d-contents nav ul {
+    margin-top: 0;
+    margin-bottom: 0.25em;
+  }
+
+  .d-article-with-toc h2:nth-child(2) {
+    margin-top: 0;
+  }
+
+
+  /* Figure */
+
+  .figure {
+    position: relative;
+    margin-bottom: 2.5em;
+    margin-top: 1.5em;
+  }
+
+  .figure img {
+    width: 100%;
+  }
+
+  .figure .caption {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 12px;
+    line-height: 1.5em;
+  }
+
+  .figure img.external {
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+    padding: 18px;
+    box-sizing: border-box;
+  }
+
+  .figure .caption a {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  .figure .caption b,
+  .figure .caption strong, {
+    font-weight: 600;
+    color: rgba(0, 0, 0, 1.0);
+  }
+
+  /* Citations */
+
+  d-article .citation {
+    color: inherit;
+    cursor: inherit;
+  }
+
+  div.hanging-indent{
+    margin-left: 1em; text-indent: -1em;
+  }
+
+  /* Citation hover box */
+
+  .tippy-box[data-theme~=light-border] {
+    background-color: rgba(250, 250, 250, 0.95);
+  }
+
+  .tippy-content > p {
+    margin-bottom: 0;
+    padding: 2px;
+  }
+
+
+  /* Tweak 1000px media break to show more text */
+
+  @media(min-width: 1000px) {
+    .base-grid,
+    distill-header,
+    d-title,
+    d-abstract,
+    d-article,
+    d-appendix,
+    distill-appendix,
+    d-byline,
+    d-footnote-list,
+    d-citation-list,
+    distill-footer {
+      grid-template-columns: [screen-start] 1fr [page-start kicker-start] 80px [middle-start] 50px [text-start kicker-end] 65px 65px 65px 65px 65px 65px 65px 65px [text-end gutter-start] 65px [middle-end] 65px [page-end gutter-end] 1fr [screen-end];
+      grid-column-gap: 16px;
+    }
+
+    .grid {
+      grid-column-gap: 16px;
+    }
+
+    d-article {
+      font-size: 1.06rem;
+      line-height: 1.7em;
+    }
+    figure .caption, .figure .caption, figure figcaption {
+      font-size: 13px;
+    }
+  }
+
+  @media(min-width: 1180px) {
+    .base-grid,
+    distill-header,
+    d-title,
+    d-abstract,
+    d-article,
+    d-appendix,
+    distill-appendix,
+    d-byline,
+    d-footnote-list,
+    d-citation-list,
+    distill-footer {
+      grid-template-columns: [screen-start] 1fr [page-start kicker-start] 60px [middle-start] 60px [text-start kicker-end] 60px 60px 60px 60px 60px 60px 60px 60px [text-end gutter-start] 60px [middle-end] 60px [page-end gutter-end] 1fr [screen-end];
+      grid-column-gap: 32px;
+    }
+
+    .grid {
+      grid-column-gap: 32px;
+    }
+  }
+
+
+  /* Get the citation styles for the appendix (not auto-injected on render since
+     we do our own rendering of the citation appendix) */
+
+  d-appendix .citation-appendix,
+  .d-appendix .citation-appendix {
+    font-size: 11px;
+    line-height: 15px;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+    padding-left: 18px;
+    border: 1px solid rgba(0,0,0,0.1);
+    background: rgba(0, 0, 0, 0.02);
+    padding: 10px 18px;
+    border-radius: 3px;
+    color: rgba(150, 150, 150, 1);
+    overflow: hidden;
+    margin-top: -12px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  /* Include appendix styles here so they can be overridden */
+
+  d-appendix {
+    contain: layout style;
+    font-size: 0.8em;
+    line-height: 1.7em;
+    margin-top: 60px;
+    margin-bottom: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    color: rgba(0,0,0,0.5);
+    padding-top: 60px;
+    padding-bottom: 48px;
+  }
+
+  d-appendix h3 {
+    grid-column: page-start / text-start;
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: 1em;
+    margin-bottom: 0;
+    color: rgba(0,0,0,0.65);
+  }
+
+  d-appendix h3 + * {
+    margin-top: 1em;
+  }
+
+  d-appendix ol {
+    padding: 0 0 0 15px;
+  }
+
+  @media (min-width: 768px) {
+    d-appendix ol {
+      padding: 0 0 0 30px;
+      margin-left: -30px;
+    }
+  }
+
+  d-appendix li {
+    margin-bottom: 1em;
+  }
+
+  d-appendix a {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  d-appendix > * {
+    grid-column: text;
+  }
+
+  d-appendix > d-footnote-list,
+  d-appendix > d-citation-list,
+  d-appendix > distill-appendix {
+    grid-column: screen;
+  }
+
+  /* Include footnote styles here so they can be overridden */
+
+  d-footnote-list {
+    contain: layout style;
+  }
+
+  d-footnote-list > * {
+    grid-column: text;
+  }
+
+  d-footnote-list a.footnote-backlink {
+    color: rgba(0,0,0,0.3);
+    padding-left: 0.5em;
+  }
+
+
+
+  /* Anchor.js */
+
+  .anchorjs-link {
+    /*transition: all .25s linear; */
+    text-decoration: none;
+    border-bottom: none;
+  }
+  *:hover > .anchorjs-link {
+    margin-left: -1.125em !important;
+    text-decoration: none;
+    border-bottom: none;
+  }
+
+  /* Social footer */
+
+  .social_footer {
+    margin-top: 30px;
+    margin-bottom: 0;
+    color: rgba(0,0,0,0.67);
+  }
+
+  .disqus-comments {
+    margin-right: 30px;
+  }
+
+  .disqus-comment-count {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+  }
+
+  #disqus_thread {
+    margin-top: 30px;
+  }
+
+  .article-sharing a {
+    border-bottom: none;
+    margin-right: 8px;
+  }
+
+  .article-sharing a:hover {
+    border-bottom: none;
+  }
+
+  .sidebar-section.subscribe {
+    font-size: 12px;
+    line-height: 1.6em;
+  }
+
+  .subscribe p {
+    margin-bottom: 0.5em;
+  }
+
+
+  .article-footer .subscribe {
+    font-size: 15px;
+    margin-top: 45px;
+  }
+
+
+  .sidebar-section.custom {
+    font-size: 12px;
+    line-height: 1.6em;
+  }
+
+  .custom p {
+    margin-bottom: 0.5em;
+  }
+
+  /* Styles for listing layout (hide title) */
+  .layout-listing d-title, .layout-listing .d-title {
+    display: none;
+  }
+
+  /* Styles for posts lists (not auto-injected) */
+
+
+  .posts-with-sidebar {
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+
+  .posts-list .description h2,
+  .posts-list .description p {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+  }
+
+  .posts-list .description h2 {
+    font-weight: 700;
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .posts-list h2.post-tag {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    padding-bottom: 12px;
+  }
+  .posts-list {
+    margin-top: 60px;
+    margin-bottom: 24px;
+  }
+
+  .posts-list .post-preview {
+    text-decoration: none;
+    overflow: hidden;
+    display: block;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 24px 0;
+  }
+
+  .post-preview-last {
+    border-bottom: none !important;
+  }
+
+  .posts-list .posts-list-caption {
+    grid-column: screen;
+    font-weight: 400;
+  }
+
+  .posts-list .post-preview h2 {
+    margin: 0 0 6px 0;
+    line-height: 1.2em;
+    font-style: normal;
+    font-size: 24px;
+  }
+
+  .posts-list .post-preview p {
+    margin: 0 0 12px 0;
+    line-height: 1.4em;
+    font-size: 16px;
+  }
+
+  .posts-list .post-preview .thumbnail {
+    box-sizing: border-box;
+    margin-bottom: 24px;
+    position: relative;
+    max-width: 500px;
+  }
+  .posts-list .post-preview img {
+    width: 100%;
+    display: block;
+  }
+
+  .posts-list .metadata {
+    font-size: 12px;
+    line-height: 1.4em;
+    margin-bottom: 18px;
+  }
+
+  .posts-list .metadata > * {
+    display: inline-block;
+  }
+
+  .posts-list .metadata .publishedDate {
+    margin-right: 2em;
+  }
+
+  .posts-list .metadata .dt-authors {
+    display: block;
+    margin-top: 0.3em;
+    margin-right: 2em;
+  }
+
+  .posts-list .dt-tags {
+    display: block;
+    line-height: 1em;
+  }
+
+  .posts-list .dt-tags .dt-tag {
+    display: inline-block;
+    color: rgba(0,0,0,0.6);
+    padding: 0.3em 0.4em;
+    margin-right: 0.2em;
+    margin-bottom: 0.4em;
+    font-size: 60%;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  .posts-list img {
+    opacity: 1;
+  }
+
+  .posts-list img[data-src] {
+    opacity: 0;
+  }
+
+  .posts-more {
+    clear: both;
+  }
+
+
+  .posts-sidebar {
+    font-size: 16px;
+  }
+
+  .posts-sidebar h3 {
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  .sidebar-section {
+    margin-bottom: 30px;
+  }
+
+  .categories ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .categories li {
+    color: rgba(0, 0, 0, 0.8);
+    margin-bottom: 0;
+  }
+
+  .categories li>a {
+    border-bottom: none;
+  }
+
+  .categories li>a:hover {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  }
+
+  .categories .active {
+    font-weight: 600;
+  }
+
+  .categories .category-count {
+    color: rgba(0, 0, 0, 0.4);
+  }
+
+
+  @media(min-width: 768px) {
+    .posts-list .post-preview h2 {
+      font-size: 26px;
+    }
+    .posts-list .post-preview .thumbnail {
+      float: right;
+      width: 30%;
+      margin-bottom: 0;
+    }
+    .posts-list .post-preview .description {
+      float: left;
+      width: 45%;
+    }
+    .posts-list .post-preview .metadata {
+      float: left;
+      width: 20%;
+      margin-top: 8px;
+    }
+    .posts-list .post-preview p {
+      margin: 0 0 12px 0;
+      line-height: 1.5em;
+      font-size: 16px;
+    }
+    .posts-with-sidebar .posts-list {
+      float: left;
+      width: 75%;
+    }
+    .posts-with-sidebar .posts-sidebar {
+      float: right;
+      width: 20%;
+      margin-top: 60px;
+      padding-top: 24px;
+      padding-bottom: 24px;
+    }
+  }
+
+
+  /* Improve display for browsers without grid (IE/Edge <= 15) */
+
+  .downlevel {
+    line-height: 1.6em;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+  }
+
+  .downlevel .d-title {
+    padding-top: 6rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .downlevel .d-title h1 {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1.1em;
+    margin: 0 0 0.5rem;
+  }
+
+  .downlevel .d-title p {
+    font-weight: 300;
+    font-size: 1.2rem;
+    line-height: 1.55em;
+    margin-top: 0;
+  }
+
+  .downlevel .d-byline {
+    padding-top: 0.8em;
+    padding-bottom: 0.8em;
+    font-size: 0.8rem;
+    line-height: 1.8em;
+  }
+
+  .downlevel .section-separator {
+    border: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .downlevel .d-article {
+    font-size: 1.06rem;
+    line-height: 1.7em;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+  }
+
+
+  .downlevel .d-appendix {
+    padding-left: 0;
+    padding-right: 0;
+    max-width: none;
+    font-size: 0.8em;
+    line-height: 1.7em;
+    margin-bottom: 0;
+    color: rgba(0,0,0,0.5);
+    padding-top: 40px;
+    padding-bottom: 48px;
+  }
+
+  .downlevel .footnotes ol {
+    padding-left: 13px;
+  }
+
+  .downlevel .base-grid,
+  .downlevel .distill-header,
+  .downlevel .d-title,
+  .downlevel .d-abstract,
+  .downlevel .d-article,
+  .downlevel .d-appendix,
+  .downlevel .distill-appendix,
+  .downlevel .d-byline,
+  .downlevel .d-footnote-list,
+  .downlevel .d-citation-list,
+  .downlevel .distill-footer,
+  .downlevel .appendix-bottom,
+  .downlevel .posts-container {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  @media(min-width: 768px) {
+    .downlevel .base-grid,
+    .downlevel .distill-header,
+    .downlevel .d-title,
+    .downlevel .d-abstract,
+    .downlevel .d-article,
+    .downlevel .d-appendix,
+    .downlevel .distill-appendix,
+    .downlevel .d-byline,
+    .downlevel .d-footnote-list,
+    .downlevel .d-citation-list,
+    .downlevel .distill-footer,
+    .downlevel .appendix-bottom,
+    .downlevel .posts-container {
+    padding-left: 150px;
+    padding-right: 150px;
+    max-width: 900px;
+  }
+  }
+
+  .downlevel pre code {
+    display: block;
+    border-left: 2px solid rgba(0, 0, 0, .1);
+    padding: 0 0 0 20px;
+    font-size: 14px;
+  }
+
+  .downlevel code, .downlevel pre {
+    color: black;
+    background: none;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+
+  .downlevel .posts-list .post-preview {
+    color: inherit;
+  }
+
+
+
+  </style>
+
+  <script type="application/javascript">
+
+  function is_downlevel_browser() {
+    if (bowser.isUnsupportedBrowser({ msie: "12", msedge: "16"},
+                                   window.navigator.userAgent)) {
+      return true;
+    } else {
+      return window.load_distill_framework === undefined;
+    }
+  }
+
+  // show body when load is complete
+  function on_load_complete() {
+
+    // add anchors
+    if (window.anchors) {
+      window.anchors.options.placement = 'left';
+      window.anchors.add('d-article > h2, d-article > h3, d-article > h4, d-article > h5');
+    }
+
+
+    // set body to visible
+    document.body.style.visibility = 'visible';
+
+    // force redraw for leaflet widgets
+    if (window.HTMLWidgets) {
+      var maps = window.HTMLWidgets.findAll(".leaflet");
+      $.each(maps, function(i, el) {
+        var map = this.getMap();
+        map.invalidateSize();
+        map.eachLayer(function(layer) {
+          if (layer instanceof L.TileLayer)
+            layer.redraw();
+        });
+      });
+    }
+
+    // trigger 'shown' so htmlwidgets resize
+    $('d-article').trigger('shown');
+  }
+
+  function init_distill() {
+
+    init_common();
+
+    // create front matter
+    var front_matter = $('<d-front-matter></d-front-matter>');
+    $('#distill-front-matter').wrap(front_matter);
+
+    // create d-title
+    $('.d-title').changeElementType('d-title');
+
+    // create d-byline
+    var byline = $('<d-byline></d-byline>');
+    $('.d-byline').replaceWith(byline);
+
+    // create d-article
+    var article = $('<d-article></d-article>');
+    $('.d-article').wrap(article).children().unwrap();
+
+    // move posts container into article
+    $('.posts-container').appendTo($('d-article'));
+
+    // create d-appendix
+    $('.d-appendix').changeElementType('d-appendix');
+
+    // flag indicating that we have appendix items
+    var appendix = $('.appendix-bottom').children('h3').length > 0;
+
+    // replace footnotes with <d-footnote>
+    $('.footnote-ref').each(function(i, val) {
+      appendix = true;
+      var href = $(this).attr('href');
+      var id = href.replace('#', '');
+      var fn = $('#' + id);
+      var fn_p = $('#' + id + '>p');
+      fn_p.find('.footnote-back').remove();
+      var text = fn_p.html();
+      var dtfn = $('<d-footnote></d-footnote>');
+      dtfn.html(text);
+      $(this).replaceWith(dtfn);
+    });
+    // remove footnotes
+    $('.footnotes').remove();
+
+    // move refs into #references-listing
+    $('#references-listing').replaceWith($('#refs'));
+
+    $('h1.appendix, h2.appendix').each(function(i, val) {
+      $(this).changeElementType('h3');
+    });
+    $('h3.appendix').each(function(i, val) {
+      var id = $(this).attr('id');
+      $('.d-contents a[href="#' + id + '"]').parent().remove();
+      appendix = true;
+      $(this).nextUntil($('h1, h2, h3')).addBack().appendTo($('d-appendix'));
+    });
+
+    // show d-appendix if we have appendix content
+    $("d-appendix").css('display', appendix ? 'grid' : 'none');
+
+    // localize layout chunks to just output
+    $('.layout-chunk').each(function(i, val) {
+
+      // capture layout
+      var layout = $(this).attr('data-layout');
+
+      // apply layout to markdown level block elements
+      var elements = $(this).children().not('details, div.sourceCode, pre, script');
+      elements.each(function(i, el) {
+        var layout_div = $('<div class="' + layout + '"></div>');
+        if (layout_div.hasClass('shaded')) {
+          var shaded_content = $('<div class="shaded-content"></div>');
+          $(this).wrap(shaded_content);
+          $(this).parent().wrap(layout_div);
+        } else {
+          $(this).wrap(layout_div);
+        }
+      });
+
+
+      // unwrap the layout-chunk div
+      $(this).children().unwrap();
+    });
+
+    // remove code block used to force  highlighting css
+    $('.distill-force-highlighting-css').parent().remove();
+
+    // remove empty line numbers inserted by pandoc when using a
+    // custom syntax highlighting theme
+    $('code.sourceCode a:empty').remove();
+
+    // load distill framework
+    load_distill_framework();
+
+    // wait for window.distillRunlevel == 4 to do post processing
+    function distill_post_process() {
+
+      if (!window.distillRunlevel || window.distillRunlevel < 4)
+        return;
+
+      // hide author/affiliations entirely if we have no authors
+      var front_matter = JSON.parse($("#distill-front-matter").html());
+      var have_authors = front_matter.authors && front_matter.authors.length > 0;
+      if (!have_authors)
+        $('d-byline').addClass('hidden');
+
+      // article with toc class
+      $('.d-contents').parent().addClass('d-article-with-toc');
+
+      // strip links that point to #
+      $('.authors-affiliations').find('a[href="#"]').removeAttr('href');
+
+      // add orcid ids
+      $('.authors-affiliations').find('.author').each(function(i, el) {
+        var orcid_id = front_matter.authors[i].orcidID;
+        if (orcid_id) {
+          var a = $('<a></a>');
+          a.attr('href', 'https://orcid.org/' + orcid_id);
+          var img = $('<img></img>');
+          img.addClass('orcid-id');
+          img.attr('alt', 'ORCID ID');
+          img.attr('src','data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==');
+          a.append(img);
+          $(this).append(a);
+        }
+      });
+
+      // hide elements of author/affiliations grid that have no value
+      function hide_byline_column(caption) {
+        $('d-byline').find('h3:contains("' + caption + '")').parent().css('visibility', 'hidden');
+      }
+
+      // affiliations
+      var have_affiliations = false;
+      for (var i = 0; i<front_matter.authors.length; ++i) {
+        var author = front_matter.authors[i];
+        if (author.affiliation !== "&nbsp;") {
+          have_affiliations = true;
+          break;
+        }
+      }
+      if (!have_affiliations)
+        $('d-byline').find('h3:contains("Affiliations")').css('visibility', 'hidden');
+
+      // published date
+      if (!front_matter.publishedDate)
+        hide_byline_column("Published");
+
+      // document object identifier
+      var doi = $('d-byline').find('h3:contains("DOI")');
+      var doi_p = doi.next().empty();
+      if (!front_matter.doi) {
+        // if we have a citation and valid citationText then link to that
+        if ($('#citation').length > 0 && front_matter.citationText) {
+          doi.html('Citation');
+          $('<a href="#citation"></a>')
+            .text(front_matter.citationText)
+            .appendTo(doi_p);
+        } else {
+          hide_byline_column("DOI");
+        }
+      } else {
+        $('<a></a>')
+           .attr('href', "https://doi.org/" + front_matter.doi)
+           .html(front_matter.doi)
+           .appendTo(doi_p);
+      }
+
+       // change plural form of authors/affiliations
+      if (front_matter.authors.length === 1) {
+        var grid = $('.authors-affiliations');
+        grid.children('h3:contains("Authors")').text('Author');
+        grid.children('h3:contains("Affiliations")').text('Affiliation');
+      }
+
+      // remove d-appendix and d-footnote-list local styles
+      $('d-appendix > style:first-child').remove();
+      $('d-footnote-list > style:first-child').remove();
+
+      // move appendix-bottom entries to the bottom
+      $('.appendix-bottom').appendTo('d-appendix').children().unwrap();
+      $('.appendix-bottom').remove();
+
+      // hoverable references
+      $('span.citation[data-cites]').each(function() {
+        var refs = $(this).attr('data-cites').split(" ");
+        var refHtml = refs.map(function(ref) {
+          return "<p>" + $('#ref-' + ref).html() + "</p>";
+        }).join("\n");
+        window.tippy(this, {
+          allowHTML: true,
+          content: refHtml,
+          maxWidth: 500,
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'light-border',
+          placement: 'bottom-start'
+        });
+      });
+
+      // clear polling timer
+      clearInterval(tid);
+
+      // show body now that everything is ready
+      on_load_complete();
+    }
+
+    var tid = setInterval(distill_post_process, 50);
+    distill_post_process();
+
+  }
+
+  function init_downlevel() {
+
+    init_common();
+
+     // insert hr after d-title
+    $('.d-title').after($('<hr class="section-separator"/>'));
+
+    // check if we have authors
+    var front_matter = JSON.parse($("#distill-front-matter").html());
+    var have_authors = front_matter.authors && front_matter.authors.length > 0;
+
+    // manage byline/border
+    if (!have_authors)
+      $('.d-byline').remove();
+    $('.d-byline').after($('<hr class="section-separator"/>'));
+    $('.d-byline a').remove();
+
+    // remove toc
+    $('.d-contents').remove();
+
+    // move appendix elements
+    $('h1.appendix, h2.appendix').each(function(i, val) {
+      $(this).changeElementType('h3');
+    });
+    $('h3.appendix').each(function(i, val) {
+      $(this).nextUntil($('h1, h2, h3')).addBack().appendTo($('.d-appendix'));
+    });
+
+
+    // inject headers into references and footnotes
+    var refs_header = $('<h3></h3>');
+    refs_header.text('References');
+    $('#refs').prepend(refs_header);
+
+    var footnotes_header = $('<h3></h3');
+    footnotes_header.text('Footnotes');
+    $('.footnotes').children('hr').first().replaceWith(footnotes_header);
+
+    // move appendix-bottom entries to the bottom
+    $('.appendix-bottom').appendTo('.d-appendix').children().unwrap();
+    $('.appendix-bottom').remove();
+
+    // remove appendix if it's empty
+    if ($('.d-appendix').children().length === 0)
+      $('.d-appendix').remove();
+
+    // prepend separator above appendix
+    $('.d-appendix').before($('<hr class="section-separator" style="clear: both"/>'));
+
+    // trim code
+    $('pre>code').each(function(i, val) {
+      $(this).html($.trim($(this).html()));
+    });
+
+    // move posts-container right before article
+    $('.posts-container').insertBefore($('.d-article'));
+
+    $('body').addClass('downlevel');
+
+    on_load_complete();
+  }
+
+
+  function init_common() {
+
+    // jquery plugin to change element types
+    (function($) {
+      $.fn.changeElementType = function(newType) {
+        var attrs = {};
+
+        $.each(this[0].attributes, function(idx, attr) {
+          attrs[attr.nodeName] = attr.nodeValue;
+        });
+
+        this.replaceWith(function() {
+          return $("<" + newType + "/>", attrs).append($(this).contents());
+        });
+      };
+    })(jQuery);
+
+    // prevent underline for linked images
+    $('a > img').parent().css({'border-bottom' : 'none'});
+
+    // mark non-body figures created by knitr chunks as 100% width
+    $('.layout-chunk').each(function(i, val) {
+      var figures = $(this).find('img, .html-widget');
+      if ($(this).attr('data-layout') !== "l-body") {
+        figures.css('width', '100%');
+      } else {
+        figures.css('max-width', '100%');
+        figures.filter("[width]").each(function(i, val) {
+          var fig = $(this);
+          fig.css('width', fig.attr('width') + 'px');
+        });
+
+      }
+    });
+
+    // auto-append index.html to post-preview links in file: protocol
+    // and in rstudio ide preview
+    $('.post-preview').each(function(i, val) {
+      if (window.location.protocol === "file:")
+        $(this).attr('href', $(this).attr('href') + "index.html");
+    });
+
+    // get rid of index.html references in header
+    if (window.location.protocol !== "file:") {
+      $('.distill-site-header a[href]').each(function(i,val) {
+        $(this).attr('href', $(this).attr('href').replace("index.html", "./"));
+      });
+    }
+
+    // add class to pandoc style tables
+    $('tr.header').parent('thead').parent('table').addClass('pandoc-table');
+    $('.kable-table').children('table').addClass('pandoc-table');
+
+    // add figcaption style to table captions
+    $('caption').parent('table').addClass("figcaption");
+
+    // initialize posts list
+    if (window.init_posts_list)
+      window.init_posts_list();
+
+    // implmement disqus comment link
+    $('.disqus-comment-count').click(function() {
+      window.headroom_prevent_pin = true;
+      $('#disqus_thread').toggleClass('hidden');
+      if (!$('#disqus_thread').hasClass('hidden')) {
+        var offset = $(this).offset();
+        $(window).resize();
+        $('html, body').animate({
+          scrollTop: offset.top - 35
+        });
+      }
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    if (is_downlevel_browser())
+      init_downlevel();
+    else
+      window.addEventListener('WebComponentsReady', init_distill);
+  });
+
+  </script>
+
+  <style type="text/css">
+  /* base variables */
+
+  /* Edit the CSS properties in this file to create a custom
+     Distill theme. Only edit values in the right column
+     for each row; values shown are the CSS defaults.
+     To return any property to the default,
+     you may set its value to: unset
+     All rows must end with a semi-colon.                      */
+
+  /* Optional: embed custom fonts here with `@import`          */
+  /* This must remain at the top of this file.                 */
+
+
+
+  html {
+    /*-- Main font sizes --*/
+    --title-size:      50px;
+    --body-size:       1.06rem;
+    --code-size:       14px;
+    --aside-size:      12px;
+    --fig-cap-size:    13px;
+    /*-- Main font colors --*/
+    --title-color:     #000000;
+    --header-color:    rgba(0, 0, 0, 0.8);
+    --body-color:      rgba(0, 0, 0, 0.8);
+    --aside-color:     rgba(0, 0, 0, 0.6);
+    --fig-cap-color:   rgba(0, 0, 0, 0.6);
+    /*-- Specify custom fonts ~~~ must be imported above   --*/
+    --heading-font:    sans-serif;
+    --mono-font:       monospace;
+    --body-font:       sans-serif;
+    --navbar-font:     sans-serif;  /* websites + blogs only */
+  }
+
+  /*-- ARTICLE METADATA --*/
+  d-byline {
+    --heading-size:    0.6rem;
+    --heading-color:   rgba(0, 0, 0, 0.5);
+    --body-size:       0.8rem;
+    --body-color:      rgba(0, 0, 0, 0.8);
+  }
+
+  /*-- ARTICLE TABLE OF CONTENTS --*/
+  .d-contents {
+    --heading-size:    18px;
+    --contents-size:   13px;
+  }
+
+  /*-- ARTICLE APPENDIX --*/
+  d-appendix {
+    --heading-size:    15px;
+    --heading-color:   rgba(0, 0, 0, 0.65);
+    --text-size:       0.8em;
+    --text-color:      rgba(0, 0, 0, 0.5);
+  }
+
+  /*-- WEBSITE HEADER + FOOTER --*/
+  /* These properties only apply to Distill sites and blogs  */
+
+  .distill-site-header {
+    --title-size:       18px;
+    --text-color:       rgba(255, 255, 255, 0.8);
+    --text-size:        15px;
+    --hover-color:      white;
+    --bkgd-color:       #0F2E3D;
+  }
+
+  .distill-site-footer {
+    --text-color:       rgba(255, 255, 255, 0.8);
+    --text-size:        15px;
+    --hover-color:      white;
+    --bkgd-color:       #0F2E3D;
+  }
+
+  /*-- Additional custom styles --*/
+  /* Add any additional CSS rules below                      */
+  </style>
+  <style type="text/css">
+  /* base variables */
+
+  /* Edit the CSS properties in this file to create a custom
+     Distill theme. Only edit values in the right column
+     for each row; values shown are the CSS defaults.
+     To return any property to the default,
+     you may set its value to: unset
+     All rows must end with a semi-colon.                      */
+
+  /* Optional: embed custom fonts here with `@import`          */
+  /* This must remain at the top of this file.                 */
+  @import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP:300, 300i&display=swap');
+  @import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700&display=swap');
+  @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono&display=swap');
+
+  html {
+    /*-- Main font sizes --*/
+    --title-size:      50px;
+    --body-size:       1.06rem;
+    --code-size:       14px;
+    --aside-size:      12px;
+    --fig-cap-size:    13px;
+    /*-- Main font colors --*/
+    --title-color:     #ca225e;
+    --header-color:    #ca225e;                    /* edited */
+    --body-color:      #404040;                    /* edited */
+    --aside-color:     rgba(0, 0, 0, 0.6);
+    --fig-cap-color:   rgba(0, 0, 0, 0.6);
+    /*-- Specify custom fonts ~~~ must be imported above   --*/
+    --heading-font:    "Noto Serif JP", sans-serif; /* edited */
+    --mono-font:       "IBM Plex Mono", monospace;  /* edited */
+    --body-font:       "Lato", sans-serif;          /* edited */
+    --navbar-font:     "Lato", sans-serif;          /* edited */
+  }
+
+  /*-- ARTICLE METADATA --*/
+  d-byline {
+    --heading-size:    0.9rem;                      /* edited */
+    --heading-color:   rgba(0, 0, 0, 0.5);
+    --body-size:       0.95rem;                     /* edited */
+    --body-color:      rgba(0, 0, 0, 0.8);
+  }
+
+  /*-- ARTICLE TABLE OF CONTENTS --*/
+  .d-contents {
+    --heading-size:    18px;
+    --contents-size:   13px;
+  }
+
+  /*-- ARTICLE APPENDIX --*/
+  d-appendix {
+    --heading-size:    15px;
+    --heading-color:   rgba(0, 0, 0, 0.65);
+    --text-size:       0.9rem;                    /* edited */
+    --text-color:      #1a162d;                   /* edited */
+  }
+
+  /*-- WEBSITE HEADER + FOOTER --*/
+  /* These properties only apply to Distill sites and blogs  */
+
+  .distill-site-header {
+    --title-size:       18px;
+    --text-color:       #1f1f1f;                   /* edited */
+    --text-size:        15px;
+    --hover-color:      #787878;                   /* edited */
+    --bkgd-color:       #fff;                      /* edited */
+  }
+
+  .distill-site-footer {
+    --text-color:       #7e7b88;                   /* edited */
+    --text-size:        15px;
+    --hover-color:      white;
+    --bkgd-color:       #ca225e3d;                 /* edited */
+  }
+
+  /*-- Additional custom styles --*/
+
+  ul > li::marker {
+    color: #ca225e;
+  }
+
+  .distill-site-header {
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    letter-spacing: 2px;
+    font-weight: 300;
+  }
+
+  .distill-site-header .logo img{
+    max-height: 40px; /* Makes logo bigger, default was 20px */
+  }
+
+  .distill-site-header {
+    padding-top: 1rem;
+  }
+
+  d-title h1,
+  d-article h2,
+  .posts-list .description h2,
+  .posts-list > h1 {
+      font-weight: 300;
+  }
+
+  d-appendix {
+    background-color: #fdf7f9;
+    border-top: none;
+  }</style>
+  <style type="text/css">
+  /* base style */
+
+  /* FONT FAMILIES */
+
+  :root {
+    --heading-default: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+    --mono-default: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    --body-default: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+  }
+
+  body,
+  .posts-list .post-preview p,
+  .posts-list .description p {
+    font-family: var(--body-font), var(--body-default);
+  }
+
+  h1, h2, h3, h4, h5, h6,
+  .posts-list .post-preview h2,
+  .posts-list .description h2 {
+    font-family: var(--heading-font), var(--heading-default);
+  }
+
+  d-article div.sourceCode code,
+  d-article pre code {
+    font-family: var(--mono-font), var(--mono-default);
+  }
+
+
+  /*-- TITLE --*/
+  d-title h1,
+  .posts-list > h1 {
+    color: var(--title-color, black);
+  }
+
+  d-title h1 {
+    font-size: var(--title-size, 50px);
+  }
+
+  /*-- HEADERS --*/
+  d-article h1,
+  d-article h2,
+  d-article h3,
+  d-article h4,
+  d-article h5,
+  d-article h6 {
+    color: var(--header-color, rgba(0, 0, 0, 0.8));
+  }
+
+  /*-- BODY --*/
+  d-article > p,  /* only text inside of <p> tags */
+  d-article > ul, /* lists */
+  d-article > ol {
+    color: var(--body-color, rgba(0, 0, 0, 0.8));
+    font-size: var(--body-size, 1.06rem);
+  }
+
+
+  /*-- CODE --*/
+  d-article div.sourceCode code,
+  d-article pre code {
+    font-size: var(--code-size, 14px);
+  }
+
+  /*-- ASIDE --*/
+  d-article aside {
+    font-size: var(--aside-size, 12px);
+    color: var(--aside-color, rgba(0, 0, 0, 0.6));
+  }
+
+  /*-- FIGURE CAPTIONS --*/
+  figure .caption,
+  figure figcaption,
+  .figure .caption {
+    font-size: var(--fig-cap-size, 13px);
+    color: var(--fig-cap-color, rgba(0, 0, 0, 0.6));
+  }
+
+  /*-- METADATA --*/
+  d-byline h3 {
+    font-size: var(--heading-size, 0.6rem);
+    color: var(--heading-color, rgba(0, 0, 0, 0.5));
+  }
+
+  d-byline {
+    font-size: var(--body-size, 0.8rem);
+    color: var(--body-color, rgba(0, 0, 0, 0.8));
+  }
+
+  d-byline a,
+  d-article d-byline a {
+    color: var(--body-color, rgba(0, 0, 0, 0.8));
+  }
+
+  /*-- TABLE OF CONTENTS --*/
+  .d-contents nav h3 {
+    font-size: var(--heading-size, 18px);
+  }
+
+  .d-contents nav a {
+    font-size: var(--contents-size, 13px);
+  }
+
+  /*-- APPENDIX --*/
+  d-appendix h3 {
+    font-size: var(--heading-size, 15px);
+    color: var(--heading-color, rgba(0, 0, 0, 0.65));
+  }
+
+  d-appendix {
+    font-size: var(--text-size, 0.8em);
+    color: var(--text-color, rgba(0, 0, 0, 0.5));
+  }
+
+  d-appendix d-footnote-list a.footnote-backlink {
+    color: var(--text-color, rgba(0, 0, 0, 0.5));
+  }
+
+  /*-- WEBSITE HEADER + FOOTER --*/
+  .distill-site-header .title {
+    font-size: var(--title-size, 18px);
+    font-family: var(--navbar-font), var(--heading-default);
+  }
+
+  .distill-site-header a,
+  .nav-dropdown .nav-dropbtn {
+    font-family: var(--navbar-font), var(--heading-default);
+  }
+
+  .nav-dropdown .nav-dropbtn {
+    color: var(--text-color, rgba(255, 255, 255, 0.8));
+    font-size: var(--text-size, 15px);
+  }
+
+  .distill-site-header a:hover,
+  .nav-dropdown:hover .nav-dropbtn {
+    color: var(--hover-color, white);
+  }
+
+  .distill-site-header {
+    font-size: var(--text-size, 15px);
+    color: var(--text-color, rgba(255, 255, 255, 0.8));
+    background-color: var(--bkgd-color, #0F2E3D);
+  }
+
+  .distill-site-footer {
+    font-size: var(--text-size, 15px);
+    color: var(--text-color, rgba(255, 255, 255, 0.8));
+    background-color: var(--bkgd-color, #0F2E3D);
+  }
+
+  .distill-site-footer a:hover {
+    color: var(--hover-color, white);
+  }</style>
+  <!--/radix_placeholder_distill-->
+  <script src="site_libs/header-attrs-2.13/header-attrs.js"></script>
+  <script src="site_libs/popper-2.6.0/popper.min.js"></script>
+  <link href="site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
+  <link href="site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
+  <script src="site_libs/tippy-6.2.7/tippy.umd.min.js"></script>
+  <script src="site_libs/anchor-4.2.2/anchor.min.js"></script>
+  <script src="site_libs/bowser-1.9.3/bowser.min.js"></script>
+  <script src="site_libs/webcomponents-2.0.0/webcomponents.js"></script>
+  <script src="site_libs/distill-2.2.21/template.v2.js"></script>
+  <!--radix_placeholder_site_in_header-->
+  <!--/radix_placeholder_site_in_header-->
+
+
+</head>
+
+<body>
+
+<!--radix_placeholder_front_matter-->
+
+<script id="distill-front-matter" type="text/json">
+{"title":"A transcriptome analysis of the western black legged tick","description":"Host blood meal experiment- Ixodes pacificus mapped to ISE6 (Ixodes scapularis) |","authors":[]}
+</script>
+
+<!--/radix_placeholder_front_matter-->
+<!--radix_placeholder_navigation_before_body-->
+<header class="header header--fixed" role="banner">
+<nav class="distill-site-nav distill-site-header">
+<div class="nav-left">
+<a href="index.html" class="title">Disease Ecologist</a>
+<input id="distill-search" class="nav-search hidden" type="text" placeholder="Search..."/>
+</div>
+<div class="nav-right">
+<span class="nav-dropdown-header">Home</span>
+<a href="index.html"></a>
+<span class="nav-dropdown-header">Research</span>
+<a href="about.html"></a>
+<span class="nav-dropdown-header">CV</span>
+<a href="CV.html"></a>
+<span class="nav-dropdown-header">Projects</span>
+<div class="nav-dropdown">
+<button class="nav-dropbtn">
+ 
+<span class="down-arrow">&#x25BE;</span>
+</button>
+<div class="nav-dropdown-content">
+<span class="nav-dropdown-header">Host bloodmeal GLM (Ring et al 2022)</span>
+<a href="proj1.html"></a>
+<span class="nav-dropdown-header">Host bloodmeal transcriptome analysis (Ring et al 2022)</span>
+<a href="proj2.html"></a>
+<span class="nav-dropdown-header">Yellow-legged frogs</span>
+<a href="proj3.html"></a>
+<span class="nav-dropdown-header">World Data</span>
+<a href="proj4.html"></a>
+</div>
+</div>
+<a href="javascript:void(0);" class="nav-toggle">&#9776;</a>
+</div>
+</nav>
+</header>
+<!--/radix_placeholder_navigation_before_body-->
+<!--radix_placeholder_site_before_body-->
+<!--/radix_placeholder_site_before_body-->
+
+<div class="d-title">
+<h1>A transcriptome analysis of the western black legged tick</h1>
+<!--radix_placeholder_categories-->
+<!--/radix_placeholder_categories-->
+<p>Host blood meal experiment- Ixodes pacificus mapped to ISE6 (Ixodes scapularis) |</p>
+</div>
+
+
+<div class="d-article">
+<div class="d-contents d-contents-float">
+<nav class="l-text toc figcaption" id="TOC">
+<h3>Contents</h3>
+<ul>
+<li><a href="#overview-of-code">Overview of code</a></li>
+<li><a href="#start-main-script">Start main script</a></li>
+<li><a href="#use-heatmap-pca-and-dispersion-to-visualize-data">Use heatmap, pca and dispersion to visualize data</a>
+<ul>
+<li><a href="#create-heatmap-to-examine-similiarities-btwn-samples">create heatmap to examine similiarities btwn samples</a></li>
+<li><a href="#pca-plot">PCA plot</a></li>
+</ul></li>
+<li><a href="#begin-de-analysis">Begin DE analysis</a>
+<ul>
+<li><a href="#volcano-plot-script">Volcano plot script</a></li>
+</ul></li>
+</ul>
+</nav>
+</div>
+<h2 id="overview-of-code">Overview of code</h2>
+<p>purpose: generate DESeq2 results objects of DE genes</p>
+<p>input: path to directory which contains (at any level) counts files from the same</p>
+<p>experiment (and only the same experiment)</p>
+<p>output: sample heatmap, PCA, pairwise DE comparisons, MA plots, volvano plots</p>
+<p>written for and by: the chou lab</p>
+<p>modified by: anne sapiro (<a href="mailto:annesapiro@gmail.com" class="email">annesapiro@gmail.com</a>), kacie ring (<a href="mailto:kacie.ring@gmail.com" class="email">kacie.ring@gmail.com</a>), fauna yarza, chase mateusiak</p>
+<p>credit: <a href="https://bioconductor.github.io/BiocWorkshops/rna-seq-data-analysis-with-deseq2.html#exploratory-data-analysis" class="uri">https://bioconductor.github.io/BiocWorkshops/rna-seq-data-analysis-with-deseq2.html#exploratory-data-analysis</a></p>
+<p>input files for this code can be downloaded from through GEO</p>
+<h4 id="description-of-packages">Description of packages</h4>
+<p>DESeq2 – differential gene expression</p>
+<p>libraries will be installed and loaded via the librarian package (<a href="https://cran.r-project.org/web/packages/librarian/vignettes/intro-to-librarian.html" class="uri">https://cran.r-project.org/web/packages/librarian/vignettes/intro-to-librarian.html</a>) you need the librarian package and Biobase installed for this to work. if needed,</p>
+<div class="layout-chunk" data-layout="l-body">
+<details>
+<summary>
+Show code
+</summary>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'># install.packages("librarian") # uncomment to use</span>
+
+<span class='co'># biobase, for installing packages from Bioconductor</span>
+
+<span class='co'>#if (!requireNamespace("BiocManager", quietly = TRUE))  #uncomment these 3 lines to install</span>
+<span class='co'>#  install.packages("BiocManager")</span>
+<span class='co'>#BiocManager::install("Biobase")</span>
+
+<span class='fu'>librarian</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/librarian/man/shelf.html'>shelf</a></span><span class='op'>(</span><span class='va'>DESeq2</span>, <span class='va'>ggplot2</span>, <span class='va'>ggfortify</span>, <span class='va'>tidyverse</span>, <span class='va'>pheatmap</span>, <span class='va'>RColorBrewer</span>, <span class='va'>cluster</span>, <span class='va'>broom</span>, <span class='va'>ggforce</span>, <span class='va'>EnhancedVolcano</span><span class='op'>)</span>
+</code></pre>
+</div>
+</details>
+</div>
+<h2 id="start-main-script">Start main script</h2>
+<div class="layout-chunk" data-layout="l-body">
+<details>
+<summary>
+Show code
+</summary>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'># point to directory with raw read counts, in this case called `counts_for_deseq`</span>
+<span class='va'>quantDir</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/file.path.html'>file.path</a></span><span class='op'>(</span><span class='st'>'Bloodmeal_quants'</span><span class='op'>)</span>
+
+
+<span class='co'># add an output directory called analysis</span>
+
+<span class='co'>#import counts files (finds all files ending in counts.cut.txt in count directory)</span>
+<span class='va'>sampleFiles</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/grep.html'>grep</a></span><span class='op'>(</span><span class='st'>'counts.cut.txt'</span>, <span class='fu'><a href='https://rdrr.io/r/base/list.files.html'>list.files</a></span><span class='op'>(</span><span class='va'>quantDir</span><span class='op'>)</span>, value <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span>
+<span class='co'>#print out the files found</span>
+<span class='co'>#sampleFiles</span>
+
+<span class='co'>#for each file (in alphabetical order, see prited out list), write what group it belongs to</span>
+<span class='va'>sampleCondition</span><span class='op'>&lt;-</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"posBb_MF"</span>,<span class='st'>"posBb_MF"</span>,<span class='st'>"posBb_MF"</span>,<span class='st'>"posBb_LF"</span>,<span class='st'>"posBb_LF"</span>,<span class='st'>"posBb_LF"</span>,<span class='st'>"negBb_MF"</span>,<span class='st'>"negBb_MF"</span>,<span class='st'>"negBb_MF"</span>,<span class='st'>"negBb_LF"</span>,<span class='st'>"negBb_LF"</span>,<span class='st'>"negBb_LF"</span>, <span class='st'>"UF_MF"</span>,<span class='st'>"UF_MF"</span>,<span class='st'>"UF_MF"</span>,<span class='st'>"UF_LF"</span>,<span class='st'>"UF_LF"</span>,<span class='st'>"UF_LF"</span><span class='op'>)</span>
+<span class='co'>#create sample table</span>
+<span class='va'>sampleTable</span><span class='op'>&lt;-</span><span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span><span class='op'>(</span>sampleName<span class='op'>=</span><span class='va'>sampleFiles</span>, fileName<span class='op'>=</span><span class='va'>sampleFiles</span>, condition<span class='op'>=</span><span class='va'>sampleCondition</span><span class='op'>)</span>
+
+<span class='co'>#double check to make sure it all looks good</span>
+<span class='va'>sampleTable</span>
+</code></pre>
+</div>
+</details>
+<pre><code>                             sampleName
+1       BbMf_PPema_05_S9.counts.cut.txt
+2      BbMf_PPema_07_S11.counts.cut.txt
+3      BbMf_PPema_08_S12.counts.cut.txt
+4      BbSf_PScoc_05_S13.counts.cut.txt
+5      BbSf_PScoc_06_S14.counts.cut.txt
+6      BbSf_PScoc_07_S15.counts.cut.txt
+7      EnMf_PPema_09_S17.counts.cut.txt
+8  EnMf_PPema_10_sub_S18.counts.cut.txt
+9      EnMf_PPema_12_S20.counts.cut.txt
+10     EnSf_Pscoc_09_S21.counts.cut.txt
+11     EnSf_Pscoc_11_S23.counts.cut.txt
+12     EnSf_Pscoc_12_S24.counts.cut.txt
+13        UF_PPema_02_S2.counts.cut.txt
+14        UF_PPema_03_S3.counts.cut.txt
+15        UF_PPema_04_S4.counts.cut.txt
+16        UF_PScoc_02_S6.counts.cut.txt
+17        UF_PScoc_03_S7.counts.cut.txt
+18        UF_PScoc_04_S8.counts.cut.txt
+                               fileName condition
+1       BbMf_PPema_05_S9.counts.cut.txt  posBb_MF
+2      BbMf_PPema_07_S11.counts.cut.txt  posBb_MF
+3      BbMf_PPema_08_S12.counts.cut.txt  posBb_MF
+4      BbSf_PScoc_05_S13.counts.cut.txt  posBb_LF
+5      BbSf_PScoc_06_S14.counts.cut.txt  posBb_LF
+6      BbSf_PScoc_07_S15.counts.cut.txt  posBb_LF
+7      EnMf_PPema_09_S17.counts.cut.txt  negBb_MF
+8  EnMf_PPema_10_sub_S18.counts.cut.txt  negBb_MF
+9      EnMf_PPema_12_S20.counts.cut.txt  negBb_MF
+10     EnSf_Pscoc_09_S21.counts.cut.txt  negBb_LF
+11     EnSf_Pscoc_11_S23.counts.cut.txt  negBb_LF
+12     EnSf_Pscoc_12_S24.counts.cut.txt  negBb_LF
+13        UF_PPema_02_S2.counts.cut.txt     UF_MF
+14        UF_PPema_03_S3.counts.cut.txt     UF_MF
+15        UF_PPema_04_S4.counts.cut.txt     UF_MF
+16        UF_PScoc_02_S6.counts.cut.txt     UF_LF
+17        UF_PScoc_03_S7.counts.cut.txt     UF_LF
+18        UF_PScoc_04_S8.counts.cut.txt     UF_LF</code></pre>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<details>
+<summary>
+Show code
+</summary>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'># pull all of the info into deseq</span>
+<span class='va'>ddsHTSeq</span><span class='op'>&lt;-</span><span class='fu'>DESeqDataSetFromHTSeqCount</span><span class='op'>(</span>sampleTable<span class='op'>=</span><span class='va'>sampleTable</span>, directory<span class='op'>=</span><span class='va'>quantDir</span>, design<span class='op'>=</span><span class='op'>~</span><span class='va'>condition</span><span class='op'>)</span>
+</code></pre>
+</div>
+</details>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<details>
+<summary>
+Show code
+</summary>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'>#### look at dds object</span>
+<span class='fu'><a href='https://rdrr.io/pkg/Matrix/man/colSums.html'>colSums</a></span><span class='op'>(</span><span class='fu'>assay</span><span class='op'>(</span><span class='va'>ddsHTSeq</span><span class='op'>)</span><span class='op'>)</span>
+</code></pre>
+</div>
+</details>
+<pre><code>     BbMf_PPema_05_S9.counts.cut.txt 
+                             2582984 
+    BbMf_PPema_07_S11.counts.cut.txt 
+                            10866198 
+    BbMf_PPema_08_S12.counts.cut.txt 
+                             2977429 
+    BbSf_PScoc_05_S13.counts.cut.txt 
+                            16231688 
+    BbSf_PScoc_06_S14.counts.cut.txt 
+                             6965725 
+    BbSf_PScoc_07_S15.counts.cut.txt 
+                             7119374 
+    EnMf_PPema_09_S17.counts.cut.txt 
+                             1200452 
+EnMf_PPema_10_sub_S18.counts.cut.txt 
+                             3355043 
+    EnMf_PPema_12_S20.counts.cut.txt 
+                             1768561 
+    EnSf_Pscoc_09_S21.counts.cut.txt 
+                             7820405 
+    EnSf_Pscoc_11_S23.counts.cut.txt 
+                             6454308 
+    EnSf_Pscoc_12_S24.counts.cut.txt 
+                             2259631 
+       UF_PPema_02_S2.counts.cut.txt 
+                             5871590 
+       UF_PPema_03_S3.counts.cut.txt 
+                             6053778 
+       UF_PPema_04_S4.counts.cut.txt 
+                             6111004 
+       UF_PScoc_02_S6.counts.cut.txt 
+                             5671841 
+       UF_PScoc_03_S7.counts.cut.txt 
+                             4696105 
+       UF_PScoc_04_S8.counts.cut.txt 
+                             7467188 </code></pre>
+<details>
+<summary>
+Show code
+</summary>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'>colData</span><span class='op'>(</span><span class='va'>ddsHTSeq</span><span class='op'>)</span>
+</code></pre>
+</div>
+</details>
+<pre><code>DataFrame with 18 rows and 1 column
+                                 condition
+                                  &lt;factor&gt;
+BbMf_PPema_05_S9.counts.cut.txt   posBb_MF
+BbMf_PPema_07_S11.counts.cut.txt  posBb_MF
+BbMf_PPema_08_S12.counts.cut.txt  posBb_MF
+BbSf_PScoc_05_S13.counts.cut.txt  posBb_LF
+BbSf_PScoc_06_S14.counts.cut.txt  posBb_LF
+...                                    ...
+UF_PPema_03_S3.counts.cut.txt        UF_MF
+UF_PPema_04_S4.counts.cut.txt        UF_MF
+UF_PScoc_02_S6.counts.cut.txt        UF_LF
+UF_PScoc_03_S7.counts.cut.txt        UF_LF
+UF_PScoc_04_S8.counts.cut.txt        UF_LF</code></pre>
+<details>
+<summary>
+Show code
+</summary>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'>rowData</span><span class='op'>(</span><span class='va'>ddsHTSeq</span><span class='op'>)</span>
+</code></pre>
+</div>
+</details>
+<pre><code>DataFrame with 30518 rows and 0 columns</code></pre>
+</div>
+<h2 id="use-heatmap-pca-and-dispersion-to-visualize-data">Use heatmap, pca and dispersion to visualize data</h2>
+<div class="layout-chunk" data-layout="l-body">
+<details>
+<summary>
+Show code
+</summary>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/base/writeLines.html'>writeLines</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/utils/capture.output.html'>capture.output</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/utils/sessionInfo.html'>sessionInfo</a></span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span>, <span class='st'>"sessionInfo.txt"</span><span class='op'>)</span>
+<span class='co'>#### check the percent of genes without zero counts.</span>
+
+<span class='co'># count number of genes</span>
+<span class='va'>geneCounts</span> <span class='op'>&lt;-</span> <span class='fu'>counts</span><span class='op'>(</span><span class='va'>ddsHTSeq</span><span class='op'>)</span>
+
+<span class='co'># make logical maxtrix of genes with (true) and without (false) zero count</span>
+<span class='va'>indexNotZero</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/apply.html'>apply</a></span><span class='op'>(</span><span class='va'>geneCounts</span>, <span class='fl'>1</span>, <span class='kw'>function</span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span> <span class='op'>{</span><span class='fu'><a href='https://rdrr.io/r/base/all.html'>all</a></span> <span class='op'>(</span><span class='va'>x</span> <span class='op'>&gt;</span> <span class='fl'>0</span><span class='op'>)</span><span class='op'>}</span><span class='op'>)</span>
+
+<span class='co'># display percent of genes with zero counts</span>
+<span class='fu'><a href='https://rdrr.io/r/base/sum.html'>sum</a></span><span class='op'>(</span><span class='va'>indexNotZero</span> <span class='op'>==</span> <span class='cn'>TRUE</span><span class='op'>)</span><span class='op'>/</span><span class='fu'><a href='https://rdrr.io/r/base/nrow.html'>nrow</a></span><span class='op'>(</span><span class='fu'>assay</span><span class='op'>(</span><span class='va'>ddsHTSeq</span><span class='op'>)</span><span class='op'>)</span>
+</code></pre>
+</div>
+</details>
+<pre><code>[1] 0.2217708</code></pre>
+</div>
+<h3 id="create-heatmap-to-examine-similiarities-btwn-samples">create heatmap to examine similiarities btwn samples</h3>
+<div class="layout-chunk" data-layout="l-body">
+<details>
+<summary>
+Show code
+</summary>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'>#normalize data - log transformation</span>
+<span class='va'>rld</span> <span class='op'>&lt;-</span> <span class='fu'>rlogTransformation</span><span class='op'>(</span><span class='va'>ddsHTSeq</span>, blind<span class='op'>=</span><span class='cn'>TRUE</span><span class='op'>)</span>
+<span class='co'>#str(rld)</span>
+
+<span class='co'>#calculate sample-to-sample distances  </span>
+<span class='va'>distsRL</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/dist.html'>dist</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/t.html'>t</a></span><span class='op'>(</span><span class='fu'>assay</span><span class='op'>(</span><span class='va'>rld</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span>
+<span class='co'>#distsRL</span>
+
+<span class='co'>#create a matrix of sample-tosample distances </span>
+<span class='va'>mat</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/matrix.html'>as.matrix</a></span><span class='op'>(</span><span class='va'>distsRL</span><span class='op'>)</span>
+<span class='fu'><a href='https://tibble.tidyverse.org/reference/rownames.html'>rownames</a></span><span class='op'>(</span><span class='va'>mat</span><span class='op'>)</span> <span class='op'>&lt;-</span> <span class='fu'>colData</span><span class='op'>(</span><span class='va'>rld</span><span class='op'>)</span><span class='op'>$</span><span class='va'>condition</span>
+<span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>colnames</a></span><span class='op'>(</span><span class='va'>mat</span><span class='op'>)</span> <span class='op'>&lt;-</span> <span class='fu'>colData</span><span class='op'>(</span><span class='va'>rld</span><span class='op'>)</span><span class='op'>$</span><span class='va'>condition</span>
+<span class='co'>#view(mat)</span>
+
+<span class='co'>#generate heatmap based on sample-to-sample distances </span>
+<span class='va'>hmcol</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/grDevices/colorRamp.html'>colorRampPalette</a></span><span class='op'>(</span><span class='fu'>brewer.pal</span><span class='op'>(</span><span class='fl'>9</span>, <span class='st'>"Blues"</span><span class='op'>)</span><span class='op'>)</span><span class='op'>(</span><span class='fl'>255</span><span class='op'>)</span>
+<span class='co'>#pheatmap(mat, trace="none", col = rev(hmcol), margin=c(13, 13))</span>
+<span class='va'>heatmap</span> <span class='op'>&lt;-</span> <span class='fu'>pheatmap</span><span class='op'>(</span><span class='va'>mat</span>, trace<span class='op'>=</span><span class='st'>"none"</span>, col <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/rev.html'>rev</a></span><span class='op'>(</span><span class='va'>hmcol</span><span class='op'>)</span>, margin<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>13</span>, <span class='fl'>13</span><span class='op'>)</span><span class='op'>)</span>
+</code></pre>
+</div>
+</details>
+<img src="proj2_files/figure-html5/unnamed-chunk-6-1.png" width="624" />
+<details>
+<summary>
+Show code
+</summary>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/grDevices/pdf.html'>pdf</a></span><span class='op'>(</span>file<span class='op'>=</span><span class='st'>"heatmap.pdf"</span><span class='op'>)</span>
+<span class='va'>heatmap</span>
+<span class='fu'><a href='https://rdrr.io/r/grDevices/dev.html'>dev.off</a></span><span class='op'>(</span><span class='op'>)</span> 
+</code></pre>
+</div>
+</details>
+<pre><code>quartz_off_screen 
+                2 </code></pre>
+</div>
+<h3 id="pca-plot">PCA plot</h3>
+<div class="layout-chunk" data-layout="l-body">
+<details>
+<summary>
+Show code
+</summary>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'># PCA</span>
+<span class='co'># from the vignette re: vst : DESeq2 offers transformations for count data that stabilize the variance across the mean: the regularize logarithm (rlog) and the variance stabilizing transformation (VST). </span>
+<span class='co'># These have slightly different implementations, discussed a bit in the DESeq2 paper and in the vignette, but a similar goal of stablizing the variance across the range of values. </span>
+<span class='co'># Both produce log2-like values for high counts</span>
+
+<span class='co'>#normalize data using variance stabilizing transformation </span>
+<span class='va'>vsd</span> <span class='op'>&lt;-</span> <span class='fu'>vst</span><span class='op'>(</span><span class='va'>ddsHTSeq</span><span class='op'>)</span>
+
+
+<span class='co'>#apply the dist function to the transpose of the transformed count matrix to get sample-to-sample distances.</span>
+<span class='co'>#create a matrix - columns=variables and rows=samples</span>
+<span class='va'>distsVS</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/dist.html'>dist</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/t.html'>t</a></span><span class='op'>(</span><span class='fu'>assay</span><span class='op'>(</span><span class='va'>vsd</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span>
+<span class='va'>pca_matrix</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/matrix.html'>as.matrix</a></span><span class='op'>(</span><span class='va'>distsVS</span><span class='op'>)</span>
+<span class='fu'><a href='https://tibble.tidyverse.org/reference/rownames.html'>rownames</a></span><span class='op'>(</span><span class='va'>pca_matrix</span><span class='op'>)</span> <span class='op'>&lt;-</span> <span class='fu'>colData</span><span class='op'>(</span><span class='va'>vsd</span><span class='op'>)</span><span class='op'>$</span><span class='va'>condition</span>
+<span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>colnames</a></span><span class='op'>(</span><span class='va'>pca_matrix</span><span class='op'>)</span> <span class='op'>&lt;-</span> <span class='fu'>colData</span><span class='op'>(</span><span class='va'>vsd</span><span class='op'>)</span><span class='op'>$</span><span class='va'>condition</span>
+
+<span class='co'># Transpose the matrix so that rows = samples and columns = variables</span>
+<span class='va'>pca_matrix</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/t.html'>t</a></span><span class='op'>(</span><span class='va'>pca_matrix</span><span class='op'>)</span>
+<span class='co'>#view(pca_matrix)</span>
+<span class='va'>sample_pca</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/prcomp.html'>prcomp</a></span><span class='op'>(</span><span class='va'>pca_matrix</span><span class='op'>)</span>
+
+<span class='co'>#look at the first 16 rows and columns </span>
+<span class='co'>#pca_matrix[1:16, 1:16]</span>
+
+<span class='co'>#convert matrix into a tibble </span>
+<span class='fu'><a href='https://tibble.tidyverse.org/reference/as_tibble.html'>as_tibble</a></span><span class='op'>(</span><span class='va'>pca_matrix</span><span class='op'>)</span>
+</code></pre>
+</div>
+</details>
+<pre><code># A tibble: 18 × 18
+   posBb_MF    V2    V3 posBb_LF    V5    V6 negBb_MF    V8    V9
+      &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;    &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;    &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+ 1       0  111.   125.    111.  117.  118.      149. 117.   145.
+ 2     111.   0    103.     75.7  84.8  84.4     132.  91.0  128.
+ 3     125. 103.     0     104.  108.  112.      143. 108.   138.
+ 4     111.  75.7  104.      0    83.0  81.7     133.  93.3  129.
+ 5     117.  84.8  108.     83.0   0    91.3     134.  99.2  131.
+ 6     118.  84.4  112.     81.7  91.3   0       135. 103.   133.
+ 7     149. 132.   143.    133.  134.  135.        0  134.   153.
+ 8     117.  91.0  108.     93.3  99.2 103.      134.   0    133.
+ 9     145. 128.   138.    129.  131.  133.      153. 133.     0 
+10     122.  86.4  113.     84.4  92.1  92.3     135. 103.   133.
+11     113.  90.7  115.     87.3  98.2  96.6     141. 104.   137.
+12     129. 111.   130.    110.  115.  116.      148. 121.   147.
+13     195. 195.   200.    192.  202.  199.      230. 203.   222.
+14     192. 192.   197.    188.  198.  196.      228. 199.   219.
+15     195. 195.   199.    192.  201.  199.      230. 202.   222.
+16     179. 176.   184.    172.  182.  180.      214. 184.   206.
+17     186. 185.   191.    181.  190.  188.      221. 193.   213.
+18     182. 180.   187.    175.  186.  183.      217. 189.   210.
+# … with 9 more variables: negBb_LF &lt;dbl&gt;, V11 &lt;dbl&gt;, V12 &lt;dbl&gt;,
+#   UF_MF &lt;dbl&gt;, V14 &lt;dbl&gt;, V15 &lt;dbl&gt;, UF_LF &lt;dbl&gt;, V17 &lt;dbl&gt;,
+#   V18 &lt;dbl&gt;</code></pre>
+<details>
+<summary>
+Show code
+</summary>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://tibble.tidyverse.org/reference/as_tibble.html'>as_tibble</a></span><span class='op'>(</span><span class='va'>pca_matrix</span>, rownames <span class='op'>=</span> <span class='st'>"sample"</span><span class='op'>)</span>
+</code></pre>
+</div>
+</details>
+<pre><code># A tibble: 18 × 19
+   sample   posBb_MF    V2    V3 posBb_LF    V5    V6 negBb_MF    V8
+   &lt;chr&gt;       &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;    &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;    &lt;dbl&gt; &lt;dbl&gt;
+ 1 posBb_MF       0  111.   125.    111.  117.  118.      149. 117. 
+ 2 posBb_MF     111.   0    103.     75.7  84.8  84.4     132.  91.0
+ 3 posBb_MF     125. 103.     0     104.  108.  112.      143. 108. 
+ 4 posBb_LF     111.  75.7  104.      0    83.0  81.7     133.  93.3
+ 5 posBb_LF     117.  84.8  108.     83.0   0    91.3     134.  99.2
+ 6 posBb_LF     118.  84.4  112.     81.7  91.3   0       135. 103. 
+ 7 negBb_MF     149. 132.   143.    133.  134.  135.        0  134. 
+ 8 negBb_MF     117.  91.0  108.     93.3  99.2 103.      134.   0  
+ 9 negBb_MF     145. 128.   138.    129.  131.  133.      153. 133. 
+10 negBb_LF     122.  86.4  113.     84.4  92.1  92.3     135. 103. 
+11 negBb_LF     113.  90.7  115.     87.3  98.2  96.6     141. 104. 
+12 negBb_LF     129. 111.   130.    110.  115.  116.      148. 121. 
+13 UF_MF        195. 195.   200.    192.  202.  199.      230. 203. 
+14 UF_MF        192. 192.   197.    188.  198.  196.      228. 199. 
+15 UF_MF        195. 195.   199.    192.  201.  199.      230. 202. 
+16 UF_LF        179. 176.   184.    172.  182.  180.      214. 184. 
+17 UF_LF        186. 185.   191.    181.  190.  188.      221. 193. 
+18 UF_LF        182. 180.   187.    175.  186.  183.      217. 189. 
+# … with 10 more variables: V9 &lt;dbl&gt;, negBb_LF &lt;dbl&gt;, V11 &lt;dbl&gt;,
+#   V12 &lt;dbl&gt;, UF_MF &lt;dbl&gt;, V14 &lt;dbl&gt;, V15 &lt;dbl&gt;, UF_LF &lt;dbl&gt;,
+#   V17 &lt;dbl&gt;, V18 &lt;dbl&gt;</code></pre>
+<details>
+<summary>
+Show code
+</summary>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'>#tibble matrix must have unique column names. Use name_repair function to indicate replicates of the condition</span>
+<span class='fu'>tibble</span><span class='fu'>::</span><span class='fu'><a href='https://tibble.tidyverse.org/reference/as_tibble.html'>as_tibble</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/diag.html'>diag</a></span><span class='op'>(</span><span class='fl'>3</span><span class='op'>)</span>, .name_repair <span class='op'>=</span> <span class='st'>"unique"</span><span class='op'>)</span>
+</code></pre>
+</div>
+</details>
+<pre><code># A tibble: 3 × 3
+   ...1  ...2  ...3
+  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+1     1     0     0
+2     0     1     0
+3     0     0     1</code></pre>
+<details>
+<summary>
+Show code
+</summary>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'>#Eigenvalues - these represent the variance explained by each PC. </span>
+<span class='co'>#We can use these to calculate the proportion of variance in the original data that each axis explains.</span>
+<span class='fu'><a href='https://generics.r-lib.org/reference/tidy.html'>tidy</a></span><span class='op'>(</span><span class='va'>sample_pca</span>, matrix <span class='op'>=</span> <span class='st'>"eigenvalues"</span><span class='op'>)</span>
+</code></pre>
+</div>
+</details>
+<pre><code># A tibble: 18 × 4
+      PC  std.dev percent cumulative
+   &lt;dbl&gt;    &lt;dbl&gt;   &lt;dbl&gt;      &lt;dbl&gt;
+ 1     1 2.06e+ 2 0.758        0.758
+ 2     2 5.87e+ 1 0.0616       0.820
+ 3     3 3.72e+ 1 0.0247       0.844
+ 4     4 3.33e+ 1 0.0198       0.864
+ 5     5 3.18e+ 1 0.0180       0.882
+ 6     6 2.98e+ 1 0.0159       0.898
+ 7     7 2.86e+ 1 0.0146       0.913
+ 8     8 2.53e+ 1 0.0114       0.924
+ 9     9 2.45e+ 1 0.0107       0.935
+10    10 2.43e+ 1 0.0106       0.945
+11    11 2.24e+ 1 0.00897      0.954
+12    12 2.23e+ 1 0.00887      0.963
+13    13 2.20e+ 1 0.00864      0.972
+14    14 2.07e+ 1 0.00768      0.980
+15    15 2.04e+ 1 0.00743      0.987
+16    16 1.99e+ 1 0.00708      0.994
+17    17 1.82e+ 1 0.00591      1    
+18    18 5.21e-15 0            1    </code></pre>
+<details>
+<summary>
+Show code
+</summary>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'>#This table can easily be used to produce a Scree Plot, which shows the fraction of total variance explained by each principal component. </span>
+<span class='fu'><a href='https://generics.r-lib.org/reference/tidy.html'>tidy</a></span><span class='op'>(</span><span class='va'>sample_pca</span>, matrix <span class='op'>=</span> <span class='st'>"eigenvalues"</span><span class='op'>)</span> <span class='op'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span> 
+  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span><span class='op'>(</span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>PC</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_bar.html'>geom_col</a></span><span class='op'>(</span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>y <span class='op'>=</span> <span class='va'>percent</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_path.html'>geom_line</a></span><span class='op'>(</span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>y <span class='op'>=</span> <span class='va'>cumulative</span>, group <span class='op'>=</span> <span class='fl'>1</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span> 
+  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_point.html'>geom_point</a></span><span class='op'>(</span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>y <span class='op'>=</span> <span class='va'>cumulative</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>labs</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='st'>"Principal component"</span>, y <span class='op'>=</span> <span class='st'>"Fraction variance explained"</span><span class='op'>)</span>
+</code></pre>
+</div>
+</details>
+<img src="proj2_files/figure-html5/unnamed-chunk-7-1.png" width="624" />
+<details>
+<summary>
+Show code
+</summary>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'># The PC scores are stored in the "x" value of the prcomp object, which is a matrix</span>
+<span class='va'>pc_scores</span> <span class='op'>&lt;-</span> <span class='va'>sample_pca</span><span class='op'>$</span><span class='va'>x</span> 
+
+<span class='co'>#calculate percent PCA </span>
+<span class='va'>percentage</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span><span class='op'>(</span><span class='va'>sample_pca</span><span class='op'>$</span><span class='va'>sdev</span> <span class='op'>/</span> <span class='fu'><a href='https://rdrr.io/r/base/sum.html'>sum</a></span><span class='op'>(</span><span class='va'>sample_pca</span><span class='op'>$</span><span class='va'>sdev</span><span class='op'>)</span> <span class='op'>*</span> <span class='fl'>100</span>, <span class='fl'>2</span><span class='op'>)</span>
+<span class='va'>percentage</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span><span class='op'>(</span> <span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>colnames</a></span><span class='op'>(</span><span class='va'>sample_pca</span><span class='op'>)</span>, <span class='st'>"("</span>, <span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span><span class='op'>(</span> <span class='fu'><a href='https://rdrr.io/r/base/character.html'>as.character</a></span><span class='op'>(</span><span class='va'>percentage</span><span class='op'>)</span>, <span class='st'>"%"</span>, <span class='st'>")"</span>, sep<span class='op'>=</span><span class='st'>""</span><span class='op'>)</span> <span class='op'>)</span>
+
+<span class='co'># Make PCA plot</span>
+<span class='va'>pca_plot</span> <span class='op'>&lt;-</span> <span class='va'>pc_scores</span> <span class='op'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span> 
+  <span class='co'># convert it to a tibble retaining the sample names as a new column</span>
+  <span class='fu'><a href='https://tibble.tidyverse.org/reference/as_tibble.html'>as_tibble</a></span><span class='op'>(</span>rownames <span class='op'>=</span> <span class='st'>"sample"</span><span class='op'>)</span> <span class='op'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span> 
+  <span class='co'># create the plot</span>
+  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span><span class='op'>(</span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span><span class='va'>PC1</span>,<span class='va'>PC2</span>, color <span class='op'>=</span> <span class='va'>sample</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_point.html'>geom_point</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/expand_limits.html'>expand_limits</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='op'>-</span><span class='fl'>250</span>, y <span class='op'>=</span> <span class='op'>-</span><span class='fl'>210</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>xlab</a></span><span class='op'>(</span><span class='va'>percentage</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>]</span><span class='op'>)</span> <span class='op'>+</span> 
+  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>ylab</a></span><span class='op'>(</span><span class='va'>percentage</span><span class='op'>[</span><span class='fl'>2</span><span class='op'>]</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='co'>#use ggforce when &lt; 4 replicates per sample condition</span>
+  <span class='fu'>ggforce</span><span class='fu'>::</span><span class='fu'><a href='https://ggforce.data-imaginist.com/reference/geom_mark_ellipse.html'>geom_mark_ellipse</a></span><span class='op'>(</span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>fill <span class='op'>=</span> <span class='va'>sample</span>,
+                                 color <span class='op'>=</span> <span class='va'>sample</span><span class='op'>)</span><span class='op'>)</span>
+
+<span class='co'>#pdf(file="PCA.pdf")</span>
+<span class='va'>pca_plot</span>
+</code></pre>
+</div>
+</details>
+<img src="proj2_files/figure-html5/unnamed-chunk-7-2.png" width="624" />
+<details>
+<summary>
+Show code
+</summary>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/grDevices/dev.html'>dev.off</a></span><span class='op'>(</span><span class='op'>)</span> 
+</code></pre>
+</div>
+</details>
+<pre><code>null device 
+          1 </code></pre>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<details>
+<summary>
+Show code
+</summary>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'>### plot dispersion</span>
+<span class='va'>ddsHTSeq_disp</span> <span class='op'>&lt;-</span> <span class='fu'>estimateSizeFactors</span><span class='op'>(</span><span class='va'>ddsHTSeq</span><span class='op'>)</span>
+<span class='va'>ddsHTSeq_disp</span> <span class='op'>&lt;-</span> <span class='fu'>estimateDispersions</span><span class='op'>(</span><span class='va'>ddsHTSeq_disp</span><span class='op'>)</span>
+<span class='fu'>plotDispEsts</span><span class='op'>(</span><span class='va'>ddsHTSeq_disp</span>, main <span class='op'>=</span> <span class='st'>"Dispersion"</span><span class='op'>)</span>
+</code></pre>
+</div>
+</details>
+<p><img src="proj2_files/figure-html5/unnamed-chunk-8-1.png" width="624" /></p>
+</div>
+<h2 id="begin-de-analysis">Begin DE analysis</h2>
+<div class="layout-chunk" data-layout="l-body">
+<details>
+<summary>
+Show code
+</summary>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'># create DESeq object</span>
+<span class='va'>dds</span> <span class='op'>&lt;-</span>  <span class='fu'>DESeq</span><span class='op'>(</span><span class='va'>ddsHTSeq</span>, betaPrior <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span>
+
+<span class='co'>########################### create results objects. There are two ways to do this: ##################################</span>
+<span class='co'># </span>
+<span class='co'># pairwise comparison for differential expression (things that increase in PScoc will be + numbers)</span>
+<span class='co'>#Comparison below is for Unfed nymphs with either a lizard(LF) of mouse(MF) larval bloodmeal</span>
+
+<span class='va'>res_UFlizard_UFmouse</span> <span class='op'>&lt;-</span> <span class='fu'>results</span> <span class='op'>(</span><span class='va'>dds</span>, contrast <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>'condition'</span>, <span class='st'>'UF_LF'</span>,<span class='st'>'UF_MF'</span><span class='op'>)</span><span class='op'>)</span>
+<span class='va'>res_UFlizard_UFmouse</span> <span class='op'>&lt;-</span> <span class='va'>res_UFlizard_UFmouse</span><span class='op'>[</span><span class='fu'><a href='https://rdrr.io/r/base/order.html'>order</a></span><span class='op'>(</span><span class='va'>res_UFlizard_UFmouse</span> <span class='op'>$</span><span class='va'>padj</span><span class='op'>)</span>,<span class='op'>]</span>
+<span class='co'>#head(res_UFlizard_UFmouse)</span>
+<span class='co'># make an MA plot to visualize data</span>
+
+
+
+<span class='co'>#pdf(file="res_UFlizard_UFmouse_maplot.pdf")</span>
+<span class='fu'>plotMA</span><span class='op'>(</span><span class='va'>res_UFlizard_UFmouse</span>, ylim<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='op'>-</span><span class='fl'>5</span>,<span class='fl'>5</span><span class='op'>)</span>, main<span class='op'>=</span><span class='st'>"Lizard-fed larvae vs. Mouse-fed larvae"</span><span class='op'>)</span>
+</code></pre>
+</div>
+</details>
+<p><img src="proj2_files/figure-html5/unnamed-chunk-9-1.png" width="624" /></p>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<details>
+<summary>
+Show code
+</summary>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'># print out the results file as a csv</span>
+<span class='co'>#write.csv(as.data.frame(res_UFlizard_UFmouse),file="res_UFlizard_UFmouse.csv", quote=F)</span>
+<span class='co'># you can copy and paste ^ code for any other pairwise comparisons, just change the groups/names</span>
+
+<span class='co'>#for unfed vs. engorged, we changed sample conditions (in Line 58) to </span>
+<span class='co'>#sampleCondition&lt;-c("Unfed","Unfed","Unfed","Unfed","Unfed","Unfed", "Engorged","Engorged","Engorged","Engorged","Engorged","Engorged","Engorged","Engorged","Engorged","Engorged","Engorged","Engorged")</span>
+<span class='co'>#our deseq comparison was as follows </span>
+<span class='co'>#res_Engorged_Unfed &lt;- results (dds, contrast = c('condition','Engorged', 'Unfed'))</span>
+</code></pre>
+</div>
+</details>
+</div>
+<h4 id="make-a-file-of-normalized-counts-which-can-help-look-at-genes-over-time-course">make a file of normalized counts, which can help look at genes over time course</h4>
+<div class="layout-chunk" data-layout="l-body">
+<details>
+<summary>
+Show code
+</summary>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>normCounts</span> <span class='op'>&lt;-</span> <span class='fu'>counts</span><span class='op'>(</span><span class='va'>dds</span>, normalized<span class='op'>=</span><span class='cn'>TRUE</span><span class='op'>)</span>
+<span class='co'>#write.csv(normCounts, file='Host_Legacy_normCounts.csv', quote=F)</span>
+
+<span class='co'># you can copy and paste ^ code for any other pairwise comparisons, just change the groups/names</span>
+</code></pre>
+</div>
+</details>
+</div>
+<h3 id="volcano-plot-script">Volcano plot script</h3>
+<p>Volcano plots visualize differentially expressed genes in the above pairwise comparision</p>
+<div class="layout-chunk" data-layout="l-body">
+<details>
+<summary>
+Show code
+</summary>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>dataframe</span> <span class='op'>&lt;-</span> <span class='va'>res_UFlizard_UFmouse</span>
+
+<span class='co'>#head(dataframe)</span>
+
+<span class='co'>#Enhanced volcano plot script</span>
+
+<span class='fu'>EnhancedVolcano</span> <span class='op'>(</span><span class='va'>dataframe</span>,
+                 lab <span class='op'>=</span> <span class='fu'><a href='https://tibble.tidyverse.org/reference/rownames.html'>rownames</a></span><span class='op'>(</span><span class='va'>dataframe</span><span class='op'>)</span>,
+                 x <span class='op'>=</span> <span class='st'>'log2FoldChange'</span>,
+                 y <span class='op'>=</span> <span class='st'>'padj'</span>,
+                 drawConnectors <span class='op'>=</span><span class='cn'>FALSE</span>,
+                 colConnectors <span class='op'>=</span> <span class='st'>'#d55e00'</span>,
+                 <span class='co'>#transcriptPointSize = 3.0, ## changes size of points</span>
+                 title <span class='op'>=</span> <span class='st'>'results_of_deseq_comparison'</span>, 
+                 xlim <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='op'>-</span><span class='fl'>5</span>, <span class='fl'>5</span><span class='op'>)</span>, <span class='co'>## x axis limit</span>
+                 ylim <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>0</span>,<span class='fl'>10</span><span class='op'>)</span>,<span class='co'>## y axis limit </span>
+                 xlab <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/bquote.html'>bquote</a></span><span class='op'>(</span><span class='op'>~</span><span class='va'>Log</span><span class='op'>[</span><span class='fl'>2</span><span class='op'>]</span><span class='op'>~</span> <span class='st'>'fold change'</span><span class='op'>)</span>, <span class='co'>## label of x axis</span>
+                 ylab <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/bquote.html'>bquote</a></span><span class='op'>(</span><span class='op'>~</span><span class='op'>-</span><span class='va'>Log</span><span class='op'>[</span><span class='fl'>10</span><span class='op'>]</span><span class='op'>~</span><span class='va'>adjusted</span><span class='op'>~</span><span class='fu'><a href='https://rdrr.io/r/grDevices/plotmath.html'>italic</a></span><span class='op'>(</span><span class='va'>P</span><span class='op'>)</span><span class='op'>)</span>, <span class='co'>## label of y axis</span>
+                 pCutoff <span class='op'>=</span> <span class='fl'>0.1</span>, <span class='co'>## p values that are being considered significant</span>
+                 col <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>'grey30'</span>, <span class='st'>'#56B4E9'</span>, <span class='st'>'#0072B2'</span>, <span class='st'>'#009E73'</span><span class='op'>)</span>, <span class='co'>## uses a color blind friendly pallete from here http://www.cookbook-r.com/Graphs/Colors_(ggplot2)/ </span>
+                 colAlpha <span class='op'>=</span> <span class='fl'>0.7</span>, <span class='co'>## from 0 to 1 this changes how opaque the points are</span>
+                 cutoffLineType <span class='op'>=</span> <span class='st'>'dotted'</span>,
+                 gridlines.major <span class='op'>=</span> <span class='cn'>FALSE</span>, <span class='co'>## gets rid of grid marks from the background</span>
+                 gridlines.minor <span class='op'>=</span> <span class='cn'>FALSE</span><span class='op'>)</span>
+</code></pre>
+</div>
+</details>
+<img src="proj2_files/figure-html5/unnamed-chunk-12-1.png" width="624" />
+<details>
+<summary>
+Show code
+</summary>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'>#ggsave('results_of_deseq_comparison_plot_logandPadj_labeled2.pdf', width = 15, height = 12, units = c("in"),</span>
+      <span class='co'># dpi = 300)</span>
+</code></pre>
+</div>
+</details>
+</div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<!--radix_placeholder_article_footer-->
+<!--/radix_placeholder_article_footer-->
+</div>
+
+<div class="d-appendix">
+</div>
+
+
+<!--radix_placeholder_site_after_body-->
+<!--/radix_placeholder_site_after_body-->
+<!--radix_placeholder_appendices-->
+<div class="appendix-bottom"></div>
+<!--/radix_placeholder_appendices-->
+<!--radix_placeholder_navigation_after_body-->
+<!--/radix_placeholder_navigation_after_body-->
+
+</body>
+
+</html>

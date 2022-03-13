@@ -1,0 +1,217 @@
+---
+title: "Does host bloodmeal identity predict tick infection success?"
+description: 
+  GLMM code used in Ring et al. 2022 |
+output: 
+  distill::distill_article:
+    theme: united
+    highlight: tango
+    code_folding: TRUE
+---
+## Introduction
+
+In Ring et al. 2022, we used a generalized mixed-effect model (GLMM) with a binomial error distribution to determine if larval bloodmeal host was a predictor of nymphal pathogen acquisition. We used larval host bloodmeal (lizard or mouse feeding) as a fixed effect with Bb infections status of the engorged nymphs as the response variable. With multiple nymphal ticks feeding on the same Bb-infected mouse, we included mouse ID as a random effect to account for pseudoreplication and any correlation between infection status and the individual nymphal host in our analyses. Trial number was nested with mouse ID as an additional random effect to account for host inoculum load variation among the experimental trials. The random effects were nested because trial and mouse ID were not independent covariates. Analyses were performed using the glmm package (v.1.4.2 ).
+
+Data utilized in these analyses can be found under Host_Blood_Meal_Data.csv
+
+
+```{r setup, include = FALSE}
+
+#setwd("~/Desktop/SFSU/Host_Legacy_GLM")
+library(here)
+library(readr)
+tick <- read_csv(here("data", "Host_Blood_Meal_Data.csv"))
+
+#install.packages("lme4")
+#install.packages("glmm")
+#install.packages("magrittr")
+library(magrittr)
+library(tidyverse)
+library(lme4)
+library(glmm)
+library(ggplot2)
+library(GGally)
+library(broom)
+library(jtools)
+library(caret)
+library(AICcmodavg)
+#load in required packages 
+library(magrittr)
+library(tidyverse)
+library(ggplot2)
+library(ragg)
+
+
+```
+
+
+```{r, include = FALSE}
+
+colnames(tick) <- c("tick_id", "lbm", "trial", "I_load", "host_id", "infection_status","path_load", "rick_qpcr")
+
+#Turn categorical variables into factors 
+tick$infection_status<-as.factor(tick$infection_status)
+tick$lbm<-as.factor(tick$lbm)
+tick$trial <-as.factor(tick$trial)
+tick$host_id <-as.factor(tick$host_id)
+tick$lbm <-as.factor(tick$lbm)
+
+str(tick)
+```
+
+
+
+## Step 1: Chi-squared test + bar & mosiac plots 
+
+```{r}
+ctable<- table(tick$lbm, tick$infection_status)
+ctable
+test <- chisq.test(table(tick$lbm, tick$infection_status))
+test
+
+#create mosaic plot 
+mosaicplot(ctable, main = "Infection status of Bb engorged nymphs",
+           xlab= "Larval blood meal",
+           ylab = "Infection status",
+           las = 1,
+           color = c("azure4", "darkcyan"))
+```
+
+
+```{r}
+#bar plot to view raw experimental results
+
+#Supplemental Figure 1 
+ggplot (tick, 
+        aes(x = lbm, fill = infection_status)) + 
+        geom_bar(position = "dodge", color = "black") + 
+        labs(title = "Infection status of Bb engorged nymphs", x ="Larval host   blooodmeal", y = "Tick count", fill = "Infection status") + 
+        theme_bw() + scale_fill_manual(values = c("azure4", "darkcyan")) 
+       
+```
+
+
+## Step 2: Glmm
+
+```{r, message = FALSE, warning = FALSE}
+#Trial and Nymphal (infected) C3H mouse host ID as random effecs 
+#Is larval blood meal a significant predictor of Infection status? 
+
+
+tick_model1<-glmer(infection_status~lbm+(1|trial), data=tick, family=binomial(link="logit"))
+#summary(tick_model1)
+```
+
+```{r, message = FALSE, warning = FALSE}
+unique(tick$host_id)
+
+tick_model2<-glmer(infection_status~lbm+(1|host_id), data=tick, family=binomial(link="logit"))
+
+#summary(tick_model2)
+
+#tick_model3<-glmer(Infection.Status~Larval.Blood.Meal+(1+Larval.Blood.Meal|Trial)+(1+Larval.Blood.Meal|HostID), data=tick, family=binomial(link="logit"))
+
+#summary(tick_model3)
+```
+
+```{r, message = FALSE, warning = FALSE}
+#first attempt
+tick_model4<-glmer(infection_status~lbm+(1|trial)+(1|host_id), data=tick, family=binomial(link="logit"))
+
+#summary(tick_model4)
+#isSingular(tick_model4)
+```
+
+```{r, warning = FALSE, message=FALSE}
+tick_model5<-glmer(infection_status~lbm+(1|host_id)+(1|trial), data=tick, family=binomial(link="logit"))
+
+#summary(tick_model5)
+
+#Are trial and Mouse ID independent??? Narrr
+#Let's remodel with them as nested random effects
+
+tick_model6<-glmer(infection_status~lbm+(1|trial:host_id), data=tick, family=binomial(link="logit"))
+
+summary(tick_model6)
+
+```
+
+
+
+```{r}
+#create Figure 2 for RIng et al 2022 manuscript 
+
+#set qqplot theme 
+theme_set(theme_bw()); theme_update(plot.title = element_text(hjust = 0.5))
+
+#subset data into lizard and mouse dataframes 
+liz<-subset(tick, lbm =="Scoc")
+mouse<-subset(tick, lbm =="Pema")
+
+Pema <-mouse$infection_status #mouse infection data
+Scoc <-liz$infection_status #liz infection data
+
+#rename, make sure they are a character 
+Mouse <- as.character(Pema)
+Lizard <- as.character(Scoc)
+
+
+
+# prepare a summary table with one row per experiment
+tickplot<- tibble(
+  host=factor(c( rep("Mouse", length(Mouse)), rep("Lizard", length(Lizard)))), 
+  outcome=c(Mouse, Lizard)) %>%
+  group_by(host) %>%
+  summarise(prob=mean(outcome == "Pos"), n=n()) %>%
+  mutate(se=sqrt(abs(prob*(1-prob)/n)))
+
+
+# visualizing with boxplot and 95% confidence intervals
+fig_1 <- ggplot(data=tickplot, aes(x=host, y=prob, fill=host)) + 
+              coord_cartesian(ylim=c(0,1)) + 
+              geom_boxplot(
+              stat='identity',
+                 aes(ymin=prob-1.96*se, 
+                 lower = prob - se,
+                 middle = prob,
+                 upper = prob + se,
+                 ymax = prob + 1.96*se)) + 
+      scale_fill_manual(values=c("darkseagreen", "#56B4E9"), 
+                          name="Larval Host") + #legend label 
+                          theme_bw()  + 
+      ylab("Proportion of Nymphs Infected")+
+      xlab("Larval Host Bloodmeal") +
+      ggtitle("Proportion of Nymphal Infection by Larval Bloodmeal Identity") +
+      theme(plot.title = element_text(hjust = 0.5, size = 10))
+
+#change the theme for proper title, axes, and legend sizes 
+my_theme = theme(
+  plot.title = element_text(size= 13),
+  axis.title.x = element_text(size = 12),
+  axis.text.x = element_text(size = 11),
+  axis.title.y = element_text(size = 12), 
+  legend.key.size = unit(1, 'cm'),
+  legend.key.height = unit(1, 'cm'),
+  legend.key.width = unit(1, 'cm'),
+  legend.title = element_text(size = 11),
+  legend.text = element_text(size =10))
+
+fig_1 <- fig_1 + my_theme
+
+
+#ggsave("fig_1.pdf", plot = fig_1, height= 15, width = 14, device = "pdf", units = "cm", dpi = 500)
+
+
+```
+
+## Results! 
+
+```{r}
+#lets look at the fig 
+
+fig_1
+
+```
+
+
+

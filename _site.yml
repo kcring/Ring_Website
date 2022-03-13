@@ -1,14 +1,28 @@
 name: "."
-title: "mfeo"
+title: "Disease Ecologist"
 description: |
-  mfeo
+  Kacie's Website
 output_dir: "docs"
 navbar:
   right:
     - text: "Home"
-      href: index.html
-    - text: "About"
-      href: about.html
-    - text: "Blog"
-      href: blog.html
-output: distill::distill_article
+    - href: index.html
+    - text: "Research"
+    - href: about.html
+    - text: "CV"
+    - href: CV.html
+    - text: "Projects"
+    - menu:
+      - text: "Host bloodmeal GLM (Ring et al 2022)"
+      - href: proj1.html
+      - text: "Host bloodmeal transcriptome analysis (Ring et al 2022)"
+      - href: proj2.html
+      - text: "Yellow-legged frogs"
+      - href: proj3.html
+      - text: "World Data"
+      - href: proj4.html
+output:
+  distill::distill_article:
+    toc: true
+    theme: theme.css
+---
