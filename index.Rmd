@@ -1,0 +1,19 @@
+---
+title: "Kacie Ring"
+image: "kacie.JPG"
+links:
+  - label: LinkedIn
+    url: "https://linkedin.com/"
+  - label: Twitter
+    url: "https://twitter.com/tickilaandlyme"
+  - label: GitHub
+    url: "https://github.com/kcring/"
+  - label: Email
+    url: "kacie_ring@ucsb.edu"
+output:
+  postcards::trestles
+site: distill::distill_website 
+---
+ 
+
+2nd Year PhD student at UCSB in the Briggs lab studying tick-borne pathogens. 
