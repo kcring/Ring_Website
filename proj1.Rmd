@@ -4,8 +4,6 @@ description:
   GLMM code used in Ring et al. 2022 |
 output: 
   distill::distill_article:
-    theme: united
-    highlight: tango
     code_folding: TRUE
 ---
 ## Introduction
