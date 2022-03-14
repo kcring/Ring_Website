@@ -13,8 +13,6 @@ navbar:
     - href: CV.html
     - text: "Projects"
     - menu:
-      - text: "Host bloodmeal GLM (Ring et al 2022)"
-      - href: proj1.html
       - text: "Host bloodmeal transcriptome analysis (Ring et al 2022)"
       - href: proj2.html
       - text: "Yellow-legged frogs"
