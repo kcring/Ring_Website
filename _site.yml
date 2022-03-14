@@ -6,19 +6,19 @@ output_dir: "docs"
 navbar:
   right:
     - text: "Home"
-    - href: index.html
+      href: index.html
     - text: "Research"
-    - href: about.html
+      href: about.html
     - text: "CV"
-    - href: CV.html
+      href: CV.html
     - text: "Projects"
-    - menu:
+      menu:
       - text: "Host bloodmeal transcriptome analysis (Ring et al 2022)"
-      - href: proj2.html
+        href: proj2.html
       - text: "Yellow-legged frogs"
-      - href: proj3.html
+        href: proj3.html
       - text: "World Data"
-      - href: proj4.html
+        href: proj4.html
 output:
   distill::distill_article:
     toc: true
