@@ -24,5 +24,4 @@ navbar:
 output:
   distill::distill_article:
     toc: true
-    theme: theme.css
 ---
